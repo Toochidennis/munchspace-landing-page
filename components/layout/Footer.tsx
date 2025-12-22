@@ -7,7 +7,7 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-12 md:py-16 mx-5 md:mx-14 rounded-t-2xl">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="mx-auto md:px-12">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Links of Interest */}
@@ -105,9 +105,9 @@ export default function Footer() {
             <Image
               src="/images/logo.svg" // Replace with your actual logo path
               alt="MunchSpace Logo"
-              width={300}
-              height={300}
-              className="w-32 md:w-40"
+              width={250}
+              height={200}
+              className="w-20 md:w-40"
             />
           </div>
 

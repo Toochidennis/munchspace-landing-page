@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react"; // From lucide-react (install if needed: npm i lucide-react)
 import Image from "next/image";
 import Link from "next/link";
