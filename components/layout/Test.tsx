@@ -1,32 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react"; // From lucide-react (install if needed: npm i lucide-react)
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) {
-        // Scrolling down and past initial position
-        setVisible(false);
-      } else {
-        // Scrolling up
-        setVisible(true);
-      }
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", controlNavbar);
-    return () => window.removeEventListener("scroll", controlNavbar);
-  }, [lastScrollY]);
 
   const navLinks = [
     { label: "Join as a Vendor", href: "#" },
@@ -35,12 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 bg-black mx-5 px-6 py-7 md:mx-14 rounded-b-2xl text-white transition-transform duration-300 ease-in-out",
-        visible ? "translate-y-0" : "-translate-y-full"
-      )}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black mx-5 px-6 py-7 md:mx-14 rounded-b-2xl text-white">
       <div className="mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-3xl font-bold">
