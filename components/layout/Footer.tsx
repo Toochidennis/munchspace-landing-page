@@ -107,7 +107,7 @@ export default function Footer() {
               alt="MunchSpace Logo"
               width={250}
               height={200}
-              className="w-20 md:w-40"
+              className="w-20 md:w-40 "
             />
           </div>
 
