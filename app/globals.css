@@ -8,6 +8,8 @@
   --color-munchprimary: #e76a39;
   --color-munchred: #c43a3a;
   --color-munchprimaryDark: #d45a2f;
+  --color-munchgreen: #3c7e41;
+  --color-munchyellow: #FFCF54;
 
   /* Font */
   --font-rubik: var(--font-rubik);
@@ -130,5 +132,10 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .footer_container {
+    background-image: url("/images/footer/greenbg.png");  
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
