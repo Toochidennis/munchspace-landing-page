@@ -92,7 +92,7 @@ export default function Footer() {
             </div>
 
             {/* Locations */}
-            <div>
+            <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6">Locations</h3>
               <ul className="space-y-4">
                 {["Enugu", "Abuja", "Lagos", "Jos", "Kano", "Warri"].map(
@@ -111,7 +111,7 @@ export default function Footer() {
             </div>
 
             {/* Legals */}
-            <div>
+            <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6 ">Legals</h3>
               <ul className="space-y-4">
                 {["Terms of Use", "Privacy Policy", "Compliance"].map(
@@ -130,10 +130,8 @@ export default function Footer() {
             </div>
 
             {/* Customer Service */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6 text-gray-300">
-                Customer Service
-              </h3>
+            <div className="mt-3 md:mt-0">
+              <h3 className="text-lg font-semibold mb-6">Customer Service</h3>
               <div className="space-y-6 text-gray-400">
                 <div>
                   <p className="mb-1">Service Hours</p>
@@ -203,7 +201,7 @@ export default function Footer() {
                   width={20}
                   height={20}
                   className="h-6 w-6"
-                  alt="x logo"
+                  alt="IG logo"
                 />
               </a>
               <a
@@ -217,7 +215,7 @@ export default function Footer() {
                   width={20}
                   height={20}
                   className="h-6 w-6"
-                  alt="x logo"
+                  alt="YT logo"
                 />
               </a>
               <a
@@ -230,7 +228,7 @@ export default function Footer() {
                   width={20}
                   height={20}
                   className="h-6 w-6"
-                  alt="x logo"
+                  alt="LI logo"
                 />
               </a>
             </div>
