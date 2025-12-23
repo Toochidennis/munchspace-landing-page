@@ -9,7 +9,7 @@
   --color-munchred: #c43a3a;
   --color-munchprimaryDark: #d45a2f;
   --color-munchgreen: #3c7e41;
-  --color-munchyellow: #FFCF54;
+  --color-munchyellow: #ffcf54;
 
   /* Font */
   --font-rubik: var(--font-rubik);
@@ -134,8 +134,13 @@
     @apply bg-background text-foreground;
   }
   .footer_container {
-    background-image: url("/images/footer/greenbg.png");  
+    background-image: url("/images/footer/greenbg.png");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  #fastest_delivery {
+    background-image: url("/images/fastest-delivery/bg.png");
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
   }
 }
