@@ -16,7 +16,7 @@ const HowWeServe = () => {
           How we <span className="text-munchprimary">Serve</span> you
         </h1>
       </div>
-      <div className="grid md:grid-cols-3 mx-5 md:mx-14 mt-15 gap-15 md:gap-30">
+      <div className="grid md:grid-cols-3 mx-3 md:mx-14 mt-15 gap-15 md:gap-30">
         <div className="px-10">
           <Image
             width={500}

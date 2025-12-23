@@ -41,7 +41,7 @@ const DownloadApp = () => {
           alt="download app"
         />
       </div>
-      <div className="md:hidden mx-5">
+      <div className="md:hidden mx-3">
         <Image
           src={"/images/iphone13.png"}
           width={700}
@@ -50,7 +50,7 @@ const DownloadApp = () => {
           className="w-2/3 mx-auto -mb-54"
         />
         <div className="bg-munchprimary w-full rounded-4xl p-5 pt-60">
-          <h1 className="font-bold text-4xl text-white font-rubik text-center">
+          <h1 className="font-bold text-3xl text-white font-rubik text-center">
             Download our app <br /> <span className="whitespace-nowrap">and start ordering.</span>
           </h1>
           <div className="mt-7 flex gap-2 mb-5">
@@ -60,7 +60,7 @@ const DownloadApp = () => {
                 height={250}
                 src={"/images/appstoredownload.png"}
                 alt="app store"
-                className="w-40"
+                className="w-35"
               />
             </Link>
             <Link href="/" className="hover:scale-105">
@@ -69,7 +69,7 @@ const DownloadApp = () => {
                 height={250}
                 src={"/images/playstoredownload.png"}
                 alt="app store"
-                className="w-40"
+                className="w-35"
               />
             </Link>
           </div>

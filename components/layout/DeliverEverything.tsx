@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const DeliverEverything = () => {
   return (
-    <div className="mx-5 md:mx-14 my-20">
+    <div className="mx-3 md:mx-14 my-20">
       <div className="md:flex justify-between items-center">
         <h1 className="font-rubik text-4xl font-semibold">
           Not just food, we <br /> deliver{" "}
@@ -64,7 +64,7 @@ const DeliverEverything = () => {
             className="mx-auto"
             src={"/images/deliver-everything/3.png"}
           />
-          <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
+          <h3 className="font-semibold font-rubik text-center whitespace-nowrap text-2xl mt-7">
             Local Markets Delivery
           </h3>
           <Link

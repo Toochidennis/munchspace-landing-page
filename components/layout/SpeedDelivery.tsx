@@ -9,14 +9,14 @@ const SpeedDelivery = () => {
     >
       <div className="px-5 md:px-0 text-white md:flex md:ms-20 items-center relative">
         <div className="md:absolute">
-          <h1 className="text-4xl md:text-[2.5rem] font-semibold font-rubik">
+          <h1 className="text-3xl md:text-[2.5rem] font-semibold font-rubik">
             The Fastest <br />{" "}
-            <span className="md:whitespace-nowrap">
+            <span className="md:whitespace-">
               <span className="text-munchprimary">Food Delivery</span> in town
             </span>
           </h1>
-          <p>
-            Hot meals, cold drinks, and everything in between, delivered in
+          <p className='mt-3'>
+            Hot meals, cold drinks, and everything in <br className='md:hidden' /> between, delivered in
             minutes.
           </p>
         </div>
