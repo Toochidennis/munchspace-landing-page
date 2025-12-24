@@ -41,7 +41,7 @@ const JoinAsARider = () => {
         </div>
       </section>
       <BecomeARiderCarousel />
-      {/* <div className="mx-3 md:mx-14 my-20">
+      <div className="mx-3 md:mx-14 my-20">
         <div className="md:flex justify-between items-center">
           <h1 className="font-rubik text-4xl font-semibold">
             Join the Prime <br /> Network in 3 Steps
@@ -122,7 +122,7 @@ const JoinAsARider = () => {
             </Link>
           </div>
         </div>
-      </div> */}
+      </div>
       <SpeedDelivery />
       <HowWeServe />
       <PromotionBanner />
