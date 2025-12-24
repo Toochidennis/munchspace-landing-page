@@ -91,12 +91,12 @@ export default function Navbar() {
         <div className="mt-9 flex flex-col items-end transform transition duration-1000 ease-in-out">
           {navLinks.map((link) => (
             <div className="flex flex-col items-end mt-3 " key={link.label}>
-              <Link
+              <a
                 href={link.href}
                 className="hover:text-munchprimary block transition-colors"
               >
                 {link.label}
-              </Link>
+              </a>
             </div>
           ))}
           <Button className="bg-munchprimary h-11 mt-4 hover:munchprimaryDark rounded-full px-6">
