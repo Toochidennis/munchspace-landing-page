@@ -5,7 +5,7 @@ const SpeedDelivery = () => {
   return (
     <section
       id="fastest_delivery"
-      className="pt-40 pb-10 overflow-x-hidden md:py-0 md:h-110 my-30 grid md:grid-cols-3 bg-cover md:bg-contain md:bg-repeat"
+      className="pt-40 pb-10 md:py-0 md:h-110 my-30 grid md:grid-cols-3 bg-cover md:bg-contain md:bg-repeat"
     >
       <div className="px-5 md:px-0 text-white md:flex md:ms-20 items-center relative">
         <div className="md:absolute">
@@ -15,19 +15,19 @@ const SpeedDelivery = () => {
               <span className="text-munchprimary">Food Delivery</span> in town
             </span>
           </h1>
-          <p className='mt-3'>
-            Hot meals, cold drinks, and everything in <br className='md:hidden' /> between, delivered in
-            minutes.
+          <p className="mt-3">
+            Hot meals, cold drinks, and everything in{" "}
+            <br className="md:hidden" /> between, delivered in minutes.
           </p>
         </div>
       </div>
-      <div className="relative flex justify-center order-3 md:order-2">
+      <div className="relative flex justify-center order-3 md:order-2 overflow-x-hidden">
         <Image
           src={"/images/fastest-delivery/deliveryguy1.png"}
           width={500}
           height={400}
           alt="delivery guy"
-          className="md:absolute -top-10 h-115 md:w-full max-w-120 mx-auto -bottom-10 -ms-5 md:ms-0"
+          className="md:absolute -top-10 min-h-115 md:w-full max-w-120 mx-auto -bottom-10 -ms-5 md:ms-0"
         />
       </div>
       <div className="px-5 md:px-0 my-10 md:mt-0 text-white order-2 md:order-3 flex items-center">

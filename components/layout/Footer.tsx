@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 export default function Footer() {
   return (
-    <div className="footer_container bg-white">
+    <div className="footer_container bg-gray-100">
       <div className="h-100 pt-17 md:pt-15 relative flex flex-col gap-3 font-rubik justify-center items-center text-center font-bold text-3xl md:text-5xl text-white">
         <p>
           Enjoy <span className="text-munchyellow">+3000</span> food from

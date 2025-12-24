@@ -30,7 +30,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Join as a Vendor", href: "#" },
-    { label: "Join as a Rider", href: "#" },
+    { label: "Join as a Rider", href: "/join-as-a-rider" },
     { label: "About MunchSpace", href: "#" },
   ];
 
