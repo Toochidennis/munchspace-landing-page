@@ -81,7 +81,7 @@ export default function BecomeARiderCarousel() {
 
   return (
     <div>
-      <section className="relative  md:block bg-munchprimary mx-3 md:mx-14 rounded-4xl">
+      <section className="relative hidden md:block bg-munchprimary mx-3 md:mx-14 rounded-4xl">
         <div className="mx-auto">
           <div className="md:flex gap-20 items-center">
             {/* Fixed phone mockup */}
@@ -211,9 +211,9 @@ export default function BecomeARiderCarousel() {
           ))}
         </div>
       </section>
-      {/* <div className="md:hidden">
+      <div className="md:hidden">
               <BecomeARiderPhone />
-          </div> */}
+          </div>
     </div>
   );
 }

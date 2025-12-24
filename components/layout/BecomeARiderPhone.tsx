@@ -1,94 +1,214 @@
 "use client";
 
+import { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
-
 const phoneScreenImages = [
-  "https://thumbs.dreamstime.com/b/smiling-truck-driver-man-thumbs-up-satisfied-service-transport-professional-delivery-worker-transportation-business-238182899.jpg", // Thumbs up driver
-  "https://thumbs.dreamstime.com/b/red-semi-truck-driving-highway-sunset-beautiful-sky-background-scenic-view-showcasing-open-road-330724989.jpg", // Scenic highway sunset
-  "https://as2.ftcdn.net/jpg/05/09/48/65/1000_F_509486562_HpkG19kRDlPpz4LO8sHhzJPwHNAEfM8N.jpg", // Happy female driver in cabin
-  "https://media.istockphoto.com/id/1205610404/photo/portrait-of-professional-truck-driver-showing-thumbs-up-and-smiling-truck-vehicle-in.jpg?s=612x612&w=0&k=20&c=lpSWnk7wj4Kf8h1KPLJiJr6mC8mitMIzy76RtbH7fjE=", // Professional thumbs up
-];
-
-const slides = [
-  {
-    title: "Unlock your full potential",
-    text: "Build independence, gain financial freedom, and unlock opportunities designed to help you thrive, on and off the road.",
-  },
-  {
-    title: "Track your progress, earn more",
-    text: "Access premium loads, better pay, and tools that put you in control of your career and earnings.",
-  },
-  {
-    title: "Instant cash-out, no stress",
-    text: "Join a network built for drivers—flexible opportunities, financial tools, and support every mile of the way.",
-  },
-  {
-    title: "You rise, we've got your back",
-    text: "Join a network built for drivers—flexible opportunities, financial tools, and support every mile of the way.",
-  },
+  "https://media.istockphoto.com/id/1362912892/photo/smiling-truck-driver-man-thumbs-up-satisfied-service-transport.jpg?s=612x612&w=0&k=20&c=C1XL2SDKFXhaH5na-G9wbgSmFU6J8T-L9wwPtJXIGY8=",
+  "https://thumbs.dreamstime.com/b/white-semi-truck-driving-scenic-highway-golden-sunset-dramatic-mountain-landscape-beautiful-transportation-355679596.jpg",
+  "https://media.istockphoto.com/id/1904501572/photo/happy-black-truck-driver-behind-steering-wheel-in-a-cabin-looking-at-camera.webp?b=1&s=612x612&w=0&k=20&c=El22WyINnu6-KVJz06lccBnwrEriI2iCXJRIFHfeb_Y=",
+  "https://media.istockphoto.com/id/157197786/photo/truck-driver-occupations-careers.jpg?s=612x612&w=0&k=20&c=4oC9oE6t2bL9hJq2p0q0b2f0q2b2f0q2b2f0q2b2f0q=", // Supportive driver image for slide 4
 ];
 
 export default function BecomeARiderPhone() {
+  const [phoneEmblaRef, phoneEmblaApi] = useEmblaCarousel({ loop: false }, [
+  ]);
+
+  const [textEmblaRef, textEmblaApi] = useEmblaCarousel({ loop: false });
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  // Synchronize text carousel with phone carousel
+  useEffect(() => {
+    if (!phoneEmblaApi || !textEmblaApi) return;
+
+    const syncCarousels = (mainApi:any, secondaryApi:any) => {
+      const selectedIndex = mainApi.selectedScrollSnap();
+      secondaryApi.scrollTo(selectedIndex);
+    };
+
+    phoneEmblaApi
+      .on("select", () => syncCarousels(phoneEmblaApi, textEmblaApi))
+      .on("reInit", () => syncCarousels(phoneEmblaApi, textEmblaApi));
+
+    textEmblaApi
+      .on("select", () => syncCarousels(textEmblaApi, phoneEmblaApi))
+      .on("reInit", () => syncCarousels(textEmblaApi, phoneEmblaApi));
+
+    // Initial sync
+    syncCarousels(phoneEmblaApi, textEmblaApi);
+
+    return () => {
+      phoneEmblaApi
+        .off("select", () => syncCarousels(phoneEmblaApi, textEmblaApi))
+        .off("reInit", () => syncCarousels(phoneEmblaApi, textEmblaApi));
+      textEmblaApi
+        .off("select", () => syncCarousels(textEmblaApi, phoneEmblaApi))
+        .off("reInit", () => syncCarousels(textEmblaApi, phoneEmblaApi));
+    };
+  }, [phoneEmblaApi, textEmblaApi]);
+
+  // Track selected slide for pagination
+  useEffect(() => {
+    if (!phoneEmblaApi) return;
+
+    const onSelect = () => setSelectedIndex(phoneEmblaApi.selectedScrollSnap());
+
+    onSelect(); // Initial
+    phoneEmblaApi.on("select", onSelect).on("reInit", onSelect);
+
+    return () => {
+      phoneEmblaApi.off("select", onSelect);
+      phoneEmblaApi.off("reInit", onSelect);
+    };
+  }, [phoneEmblaApi]);
+
+  // Scroll to specific slide on dot click
+  const scrollTo = useCallback(
+    (index: number) => {
+      phoneEmblaApi?.scrollTo(index);
+      textEmblaApi?.scrollTo(index);
+    },
+    [phoneEmblaApi, textEmblaApi]
+  );
+
+  const slideCount = phoneScreenImages.length;
+
   return (
-    <section className="relative md:hidden">
-      {/* Carousel viewport */}
-      <div className="">
-        <Carousel className="w-full">
-          <CarouselContent>
-            {slides.map((slide, index) => (
-              <CarouselItem
-                key={index}
-                className={cn("min-h-200 relative", index !== 0 && "-ms-")}
-              >
-                <div className="bg-black w-screen flex justify-center">
-                  <div className="flex flex-col items-center justify-end bg-munchprimary w-10/12 mx-auto rounded-2xl py-12 md:py-20 self-end bottom-0 absolute">
-                    {/* Phone mockup with rounded orange background shape */}
-                    <div className="relative mb-8-end">
-                      {/* <div className="absolute inset-0 rounded-full scale-150 -z-10" /> */}
-                      <div className="relative w-64 md:w-80 aspect-9/19 max-h-110 -mt-70 rounded-3xl border-8 border-black overflow-hidden shadow-2xl">
+    <div>
+      <section className="relative  md:hidden bg-munchprimary mx-3 md:mx-14 rounded-4xl">
+        <div className="mx-auto">
+          <div className="md:flex gap-20 items-center">
+            {/* Fixed phone mockup */}
+            <div className="relative flex">
+              <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/19 rounded-4xl mb-15 -mt-50 md:-mt-25 bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
+                {/* Carousel for phone screen images */}
+                <div
+                  className="absolute inset-0 rounded-2xl overflow-hidden"
+                  ref={phoneEmblaRef}
+                >
+                  <div className="flex h-full">
+                    {phoneScreenImages.map((src, index) => (
+                      <div
+                        key={index}
+                        className="relative flex-none w-full h-full min-w-0"
+                      >
                         <Image
-                          src={phoneScreenImages[index]}
-                          alt={`Slide ${index + 1} promotional image`}
+                          src={src}
+                          alt={`Promotional truck driving scene ${index + 1}`}
                           fill
                           className="object-cover"
+                          priority={index === 0}
                         />
                       </div>
-                    </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                    {/* Title */}
-                    <h1 className="text-3xl font-semibold font-rubik text-white mb-4 px-4">
-                      {slide.title}
+            {/* Text carousel */}
+            <div className="md:text-left text-white ">
+              <div className="overflow-hidden pb-18 md:pb-0" ref={textEmblaRef}>
+                <div className="flex">
+                  {/* Slide 1 */}
+                  <div className="flex-none w-full min-w-0 px-4">
+                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                      Unlock your full
+                      <br />
+                      potential
                     </h1>
-
-                    {/* Description */}
-                    <p className="text-base md:text-lg text-white/90 mb-8 max-w-md px-4">
-                      {/* {slide.text} */}
+                    <p className="md:text-xl mb-8 opacity-90">
+                      Build independence, gain financial freedom, and unlock
+                      <br />
+                      opportunities designed to help you thrive, on and off the
+                      road.
                     </p>
+                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      Join the Prime Network{" "}
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
 
-                    {/* CTA Button */}
-                    <button className="bg-white text-munchprimary px-6 py-3 rounded-xl font-semibold text-base md:text-lg hover:bg-gray-100 transition flex items-center gap-2 shadow-lg">
-                      Join the Prime Network
+                  {/* Slide 2 */}
+                  <div className="flex-none w-full min-w-0 px-4">
+                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                      Track your progress,
+                      <br />
+                      earn more
+                    </h1>
+                    <p className="md:text-xl mb-8 opacity-90">
+                      Access premium loads, better pay, and tools that put you
+                      in control
+                      <br />
+                      of your career and earnings.
+                    </p>
+                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      Join the Prime Network{" "}
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  {/* Slide 3 */}
+                  <div className="flex-none w-full min-w-0 px-4">
+                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                      Instant cash-out,
+                      <br />
+                      no stress
+                    </h1>
+                    <p className="md:text-xl mb-8 opacity-90">
+                      Join a network built for drivers—flexible opportunities,
+                      <br />
+                      financial tools, and support every mile of the way.
+                    </p>
+                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      Join the Prime Network{" "}
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  {/* Slide 4 - Newly added */}
+                  <div className="flex-none w-full min-w-0 px-4">
+                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                      You rise, we've got
+                      <br />
+                      your back
+                    </h1>
+                    <p className="md:text-xl mb-8 opacity-90">
+                      Join a network built for drivers—flexible opportunities,
+                      <br />
+                      financial tools, and support every mile of the way.
+                    </p>
+                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      Join the Prime Network{" "}
                       <ChevronRight className="w-5 h-5" />
                     </button>
                   </div>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          {/* <CarouselPrevious />
-          <CarouselNext /> */}
-        </Carousel>
-      </div>
-    </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pagination dots */}
+        <div className="absolute bottom-8 pe-4 md:pe-0 right-1 md:-translate-x-1/2 flex gap-3">
+          {Array.from({ length: slideCount }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`w-9 h-1.5 rounded-full transition-all duration-300 ${
+                index === selectedIndex
+                  ? "bg-white"
+                  : "bg-white/50 hover:bg-white/80"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
