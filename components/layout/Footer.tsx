@@ -118,7 +118,7 @@ export default function Footer() {
                   (item) => (
                     <li key={item}>
                       <Link
-                        href="#"
+                        href="/terms-of-use"
                         className="hover:text-munchprimary hover:translate-x-1 transition-all duration-300"
                       >
                         {item}

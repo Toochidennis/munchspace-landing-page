@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import BecomeARiderPhone from "./BecomeARiderPhone";
 import BecomeAVendorPhone from "./BecomeAVendorPhone";
 
@@ -15,7 +15,7 @@ const phoneScreenImages = [
   "https://media.istockphoto.com/id/157197786/photo/truck-driver-occupations-careers.jpg?s=612x612&w=0&k=20&c=4oC9oE6t2bL9hJq2p0q0b2f0q2b2f0q2b2f0q2b2f0q=", // Supportive driver image for slide 4
 ];
 
-export default function BecomeARiderCarousel() {
+export default function BecomeAVendorCarousel() {
   const [phoneEmblaRef, phoneEmblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: true }),
   ]);
@@ -82,12 +82,15 @@ export default function BecomeARiderCarousel() {
 
   return (
     <div>
-      <section className="relative hidden md:block bg-munchprimary mx-3 md:mx-14 rounded-4xl">
+      <section
+        className="relative hidden md:block bg-cover rounded-4xl md:py-20 md:pt-40 md:px-20"
+        id="everythingvendor"
+      >
         <div className="mx-auto">
           <div className="md:flex gap-20 items-center">
             {/* Fixed phone mockup */}
             <div className="relative flex">
-              <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/19 rounded-4xl mb-15 -mt-50 md:-mt-25 bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
+              <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/16 rounded-4xl bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
                 {/* Carousel for phone screen images */}
                 <div
                   className="absolute inset-0 rounded-2xl overflow-hidden"
@@ -130,9 +133,9 @@ export default function BecomeARiderCarousel() {
                       opportunities designed to help you thrive, on and off the
                       road.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      Join the Prime Network{" "}
-                      <ChevronRight className="w-5 h-5" />
+                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      join as a Vendor
+                      <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
                   </div>
 
@@ -149,9 +152,9 @@ export default function BecomeARiderCarousel() {
                       <br />
                       of your career and earnings.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      Join the Prime Network{" "}
-                      <ChevronRight className="w-5 h-5" />
+                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      join as a Vendor
+                      <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
                   </div>
 
@@ -167,9 +170,9 @@ export default function BecomeARiderCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      Join the Prime Network{" "}
-                      <ChevronRight className="w-5 h-5" />
+                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      join as a Vendor
+                      <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
                   </div>
 
@@ -185,9 +188,9 @@ export default function BecomeARiderCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      Join the Prime Network{" "}
-                      <ChevronRight className="w-5 h-5" />
+                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                      join as a Vendor
+                      <ChevronRight className="w-5 h-5 mt-1" />
                     </button>
                   </div>
                 </div>
@@ -213,8 +216,8 @@ export default function BecomeARiderCarousel() {
         </div>
       </section>
       <div className="md:hidden">
-              <BecomeAVendorPhone />
-          </div>
+        <BecomeAVendorPhone />
+      </div>
     </div>
   );
 }
