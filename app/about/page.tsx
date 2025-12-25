@@ -13,7 +13,7 @@ const About = () => {
     <div className="min-h-screen mt-40 md:mt-23">
       <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-20 md:mb-0 items-center">
         <div className="basis-3/4">
-          <h1 className="text-5xl/15 md:text-7xl/17 font-bold font-rubik">
+          <h1 className="text-5xl/15 md:text-7xl/23 font-bold font-rubik">
             Not Just <span className="text-munchprimary">Orders,</span> <br />{" "}
             <span className="text-munchprimary">We Deliver</span> Experiences
           </h1>

@@ -14,18 +14,18 @@ const DownloadApp = () => {
             <div className="mt-7 flex gap-5">
               <Link href="/" className="hover:scale-105">
                 <Image
-                  width={500}
-                  height={250}
-                  src={"/images/appstoredownload.png"}
+                  width={1000}
+                  height={500}
+                  src={"/images/appstoredownload1.png"}
                   alt="app store"
                   className="w-35"
                 />
               </Link>
               <Link href="/" className="hover:scale-105">
                 <Image
-                  width={500}
-                  height={250}
-                  src={"/images/playstoredownload.png"}
+                  width={1000}
+                  height={500}
+                  src={"/images/playstoredownload1.png"}
                   alt="app store"
                   className="w-35"
                 />
@@ -43,31 +43,31 @@ const DownloadApp = () => {
       </div>
       <div className="md:hidden mx-3">
         <Image
-          src={"/images/iphone13.png"}
-          width={700}
-          height={500}
+          src={"/images/iphone131.png"}
+          width={1000}
+          height={1500}
           alt="iphone 13"
           className="w-2/3 mx-auto -mb-54"
         />
-        <div className="bg-munchprimary w-full rounded-4xl p-5 pt-60">
+        <div className="bg-munchorange w-full rounded-4xl p-5 pt-60">
           <h1 className="font-bold text-3xl text-white font-rubik text-center">
             Download our app <br /> <span className="whitespace-nowrap">and start ordering.</span>
           </h1>
           <div className="mt-7 flex gap-2 mb-5">
             <Link href="/" className="hover:scale-105">
               <Image
-                width={500}
-                height={250}
-                src={"/images/appstoredownload.png"}
+                width={1000}
+                height={500}
+                src={"/images/appstoredownload1.png"}
                 alt="app store"
                 className="w-35"
               />
             </Link>
             <Link href="/" className="hover:scale-105">
               <Image
-                width={500}
-                height={250}
-                src={"/images/playstoredownload.png"}
+                width={1000}
+                height={500}
+                src={"/images/playstoredownload1.png"}
                 alt="app store"
                 className="w-35"
               />

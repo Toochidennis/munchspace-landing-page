@@ -10,10 +10,10 @@ import React from "react";
 
 const JoinAsARider = () => {
   return (
-    <div className="min-h-screen mt-40 md:mt-30">
+    <div className="min-h-screen mt-40 md:mt-23">
       <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-70 md:mb-0 items-center">
         <div className="basis-2/4">
-          <h1 className="text-5xl/15 md:text-7xl/17 font-bold font-rubik">
+          <h1 className="text-5xl/15 md:text-7xl/22 font-bold font-rubik">
             Become a{" "}
             <span className="text-munchprimary block md:inline">
               Prime <br className="hidden md:inline" /> Delivery{" "}

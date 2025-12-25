@@ -211,7 +211,7 @@ export default function Footer() {
               >
                 {/* 07038479738 */}
                 <Image
-                  src={"/Youtube.png"}
+                  src={"/icons/YouTube.png"}
                   width={20}
                   height={20}
                   className="h-6 w-6"

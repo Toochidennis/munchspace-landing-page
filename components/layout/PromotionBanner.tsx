@@ -20,18 +20,18 @@ export default function PromotionBanner() {
             <div className="mt-7 flex gap-5">
               <Link href="/" className="hover:scale-105">
                 <Image
-                  width={500}
-                  height={250}
-                  src={"/images/appstoredownload.png"}
+                  width={1000}
+                  height={500}
+                  src={"/images/appstoredownload1.png"}
                   alt="app store"
                   className="w-40 h-15"
                 />
               </Link>
               <Link href="/" className="hover:scale-105">
                 <Image
-                  width={500}
-                  height={250}
-                  src={"/images/playstoredownload.png"}
+                  width={1000}
+                  height={500}
+                  src={"/images/playstoredownload1.png"}
                   alt="app store"
                   className="w-40 h-15"
                 />
@@ -77,18 +77,18 @@ export default function PromotionBanner() {
           <div className="mt-7 flex gap-5">
             <Link href="/" className="hover:scale-105">
               <Image
-                width={500}
-                height={250}
-                src={"/images/appstoredownload.png"}
+                width={1000}
+                height={500}
+                src={"/images/appstoredownload1.png"}
                 alt="app store"
                 className="w-30"
               />
             </Link>
             <Link href="/" className="hover:scale-105">
               <Image
-                width={500}
-                height={250}
-                src={"/images/playstoredownload.png"}
+                width={1000}
+                height={500}
+                src={"/images/playstoredownload1.png"}
                 alt="app store"
                 className="w-30"
               />
