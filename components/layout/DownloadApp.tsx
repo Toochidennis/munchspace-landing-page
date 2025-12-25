@@ -5,9 +5,9 @@ import React from "react";
 const DownloadApp = () => {
   return (
     <>
-      <div className="my-20 hidden md:block" id="promotion">
+      <div className="my-20 hidden md:block relative" id="promotion">
         <div className="flex items-center justify-center w-full absolute h-full">
-          <div className="text-white">
+          <div className="text-white mt-15">
             <h1 className="font-rubik font-bold text-5xl">
               Download our app <br /> and start ordering.
             </h1>
