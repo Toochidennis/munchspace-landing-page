@@ -28,7 +28,7 @@ export default function BecomeAVendorCarousel() {
   useEffect(() => {
     if (!phoneEmblaApi || !textEmblaApi) return;
 
-    const syncCarousels = (mainApi:any, secondaryApi:any) => {
+    const syncCarousels = (mainApi: any, secondaryApi: any) => {
       const selectedIndex = mainApi.selectedScrollSnap();
       secondaryApi.scrollTo(selectedIndex);
     };
@@ -90,6 +90,13 @@ export default function BecomeAVendorCarousel() {
           <div className="md:flex gap-20 items-center">
             {/* Fixed phone mockup */}
             <div className="relative flex">
+              <Image
+                src={"/icons/crown.png"}
+                alt="crown"
+                width={200}
+                height={200}
+                className="object-contain w-23 -right-16 -top-18 absolute"
+              />
               <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/16 rounded-4xl bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
                 {/* Carousel for phone screen images */}
                 <div

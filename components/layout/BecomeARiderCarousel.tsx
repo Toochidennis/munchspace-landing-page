@@ -87,6 +87,13 @@ export default function BecomeARiderCarousel() {
           <div className="md:flex gap-20 items-center">
             {/* Fixed phone mockup */}
             <div className="relative flex">
+              <Image
+                src={"/icons/crown.png"}
+                alt="crown"
+                width={200}
+                height={200}
+                className="object-contain w-23 -right-16 -top-44 absolute"
+              />
               <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/19 rounded-4xl mb-15 -mt-50 md:-mt-25 bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
                 {/* Carousel for phone screen images */}
                 <div
@@ -213,8 +220,8 @@ export default function BecomeARiderCarousel() {
         </div>
       </section>
       <div className="md:hidden">
-              <BecomeAVendorPhone />
-          </div>
+        <BecomeAVendorPhone />
+      </div>
     </div>
   );
 }
