@@ -20,11 +20,11 @@ const DeliverEverything = () => {
       <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-30">
         <div className="px-10">
           <Image
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/deliver-everything/1.png"}
+            src={"/images/deliver-everything/11.png"}
           />
           <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
             Restaurant & Shops Delivery
@@ -39,11 +39,11 @@ const DeliverEverything = () => {
         </div>
         <div className="px-10">
           <Image
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/deliver-everything/2.png"}
+            src={"/images/deliver-everything/21.png"}
           />
           <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
             Pharmacies Delivery
@@ -58,11 +58,11 @@ const DeliverEverything = () => {
         </div>
         <div className="px-10">
           <Image
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/deliver-everything/3.png"}
+            src={"/images/deliver-everything/31.png"}
           />
           <h3 className="font-semibold font-rubik text-center whitespace-nowrap text-2xl mt-7">
             Local Markets Delivery

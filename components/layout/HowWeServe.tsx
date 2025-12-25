@@ -19,11 +19,11 @@ const HowWeServe = () => {
       <div className="grid md:grid-cols-3 mx-3 md:mx-14 mt-15 gap-15 md:gap-30">
         <div className="px-10">
           <Image
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/serve/order.png"}
+            src={"/images/serve/order1.png"}
           />
           <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
             Browse & Order
@@ -41,7 +41,7 @@ const HowWeServe = () => {
             height={500}
             alt="order"
             className="mx-auto"
-            src={"/images/serve/pack.png"}
+            src={"/images/serve/pack1.png"}
           />
           <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
             We Pick & Pack
@@ -57,7 +57,7 @@ const HowWeServe = () => {
             height={500}
             alt="order"
             className="mx-auto"
-            src={"/images/serve/deliver.png"}
+            src={"/images/serve/deliver1.png"}
           />
           <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
             We Deliver to You

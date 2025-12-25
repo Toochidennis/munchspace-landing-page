@@ -24,7 +24,7 @@ const JoinAsARider = () => {
           <Button
             // href={"join-prime-network"}
             variant={"outline"}
-            className="text-munchprimary text-center bg-gray-100 border-munchprimary"
+            className="text-munchprimary text-center mt-3 bg-gray-100 border-munchprimary"
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
           >
             <span>Join the Prime Network</span>
@@ -56,11 +56,11 @@ const JoinAsARider = () => {
         <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-30">
           <div className="px-10">
             <Image
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/join/1.png"}
+              src={"/images/join/11.png"}
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Register in minutes
@@ -79,11 +79,11 @@ const JoinAsARider = () => {
           </div>
           <div className="px-10">
             <Image
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/join/2.png"}
+              src={"/images/join/21.png"}
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Pharmacies Delivery
@@ -102,11 +102,11 @@ const JoinAsARider = () => {
           </div>
           <div className="px-10">
             <Image
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/join/3.png"}
+              src={"/images/join/31.png"}
             />
             <h3 className="font-semibold font-rubik text-center whitespace-nowrap text-2xl mt-7">
               Local Markets Delivery
