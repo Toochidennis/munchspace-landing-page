@@ -35,10 +35,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="max-w-400 mx-auto px-3 md:px-14 fixed top-0 w-full left-0 right-0 z-50">
+    <div className="max-w-450 mx-auto px-3 md:px-14 fixed top-0 w-full left-0 right-0 z-50">
       <header
         className={cn(
-          " max-w-400 mx-auto bg-black px-6 py-7 rounded-b-2xl text-white transition-transform duration-300 ease-in-out",
+          " max-w-450 mx-auto bg-black px-6 py-7 rounded-b-2xl text-white transition-transform duration-300 ease-in-out",
           visible ? "translate-y-0" : "-translate-y-full"
         )}
       >
