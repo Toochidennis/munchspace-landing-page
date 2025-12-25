@@ -14,8 +14,7 @@ const phoneScreenImages = [
 ];
 
 export default function BecomeARiderPhone() {
-  const [phoneEmblaRef, phoneEmblaApi] = useEmblaCarousel({ loop: false }, [
-  ]);
+  const [phoneEmblaRef, phoneEmblaApi] = useEmblaCarousel({ loop: false }, []);
 
   const [textEmblaRef, textEmblaApi] = useEmblaCarousel({ loop: false });
 
@@ -25,7 +24,7 @@ export default function BecomeARiderPhone() {
   useEffect(() => {
     if (!phoneEmblaApi || !textEmblaApi) return;
 
-    const syncCarousels = (mainApi:any, secondaryApi:any) => {
+    const syncCarousels = (mainApi: any, secondaryApi: any) => {
       const selectedIndex = mainApi.selectedScrollSnap();
       secondaryApi.scrollTo(selectedIndex);
     };
@@ -85,12 +84,12 @@ export default function BecomeARiderPhone() {
             {/* Fixed phone mockup */}
             <div className="relative flex">
               <Image
-                              src={"/icons/Crown.png"}
-                              alt="Crown"
-                              width={200}
-                              height={200}
-                              className="object-contain w-23 right-0 -top-67 absolute"
-                            />
+                src={"/icons/Crown.png"}
+                alt="Crown"
+                width={200}
+                height={200}
+                className="object-contain w-23 right-0 -top-67 absolute"
+              />
               <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/19 rounded-4xl mb-15 -mt-50 md:-mt-25 bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
                 {/* Carousel for phone screen images */}
                 <div
