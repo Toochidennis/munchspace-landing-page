@@ -91,8 +91,8 @@ export default function BecomeAVendorCarousel() {
             {/* Fixed phone mockup */}
             <div className="relative flex">
               <Image
-                src={"/icons/crown.png"}
-                alt="crown"
+                src={"/icons/Crown.png"}
+                alt="Crown"
                 width={200}
                 height={200}
                 className="object-contain w-23 -right-16 -top-18 absolute"
