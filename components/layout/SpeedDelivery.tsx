@@ -24,7 +24,7 @@ const SpeedDelivery = () => {
       <div className="flex items-center justify-center order-3 md:order-2 overflow-hidden md:-mt-14">
         <div>
           <Image
-            src={"/images/fastest-delivery/deliveryguy3.png"}
+            src={"/images/fastest-delivery/deliveryguy4.png"}
             width={1000}
             height={1400}
             alt="delivery guy"
