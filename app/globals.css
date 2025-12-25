@@ -168,6 +168,21 @@
     animation: slide-in 1s ease-out forwards;
   }
 
+   @keyframes slide-out {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-out {
+    animation: slide-out 1s ease-out forwards;
+  }
+
   .delay-100 { animation-delay: 0.1s; }
   .delay-200 { animation-delay: 0.2s; }
   .delay-300 { animation-delay: 0.3s; }

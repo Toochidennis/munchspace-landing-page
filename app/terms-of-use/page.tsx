@@ -12,20 +12,22 @@ const TermsOfUse = () => {
           Last updated: November 2025
         </p>
       </section>
-      <Image
-        src={"/images/terms-of-use/brush.png"}
-        width={2000}
-        height={200}
-        alt="brush seperator"
-        className="mb-10 w-screen -mt-10 h-20 md:h-fit hidden md:block"
-      />
-      <Image
-        src={"/images/terms-of-use/brushmobile.png"}
-        width={2000}
-        height={200}
-        alt="brush seperator"
-        className="mb-10 w-screen -mt-10 h-20 md:h-fit md:hidden"
-      />
+      <div className="overflow-y-hidden">
+        <Image
+          src={"/images/terms-of-use/brush.png"}
+          width={2000}
+          height={200}
+          alt="brush seperator"
+          className="mb-10 w-screen h-20 md:h-fit hidden md:block -mt-10"
+        />
+        <Image
+          src={"/images/terms-of-use/brushmobile1.png"}
+          width={2000}
+          height={200}
+          alt="brush seperator"
+          className="mb-10 w-screen h-20 md:h-fit md:hidden -mt-10"
+        />
+      </div>
       <div className="mx-3 md:mx-14 text-sm mb-15">
         <p className="mb-5">
           Welcome to MunchSpace, a platform that connects customers,

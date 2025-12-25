@@ -35,10 +35,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="max-w-450 mx-auto px-3 md:px-14 fixed top-0 w-full left-0 right-0 z-50">
+    <div className="max-w-450 mx-auto px-3 md:px-14 fixed top-0 w-full left-0 right-0 z-50 animate-slide-out delay-300">
       <header
         className={cn(
-          " max-w-450 mx-auto bg-black px-6 py-7 rounded-b-2xl text-white transition-transform duration-300 ease-in-out",
+          "max-w-450 mx-auto bg-black px-6 py-7 rounded-b-2xl text-white transition-transform duration-700 ease-in-out",
           visible ? "translate-y-0" : "-translate-y-full"
         )}
       >
@@ -88,10 +88,17 @@ export default function Navbar() {
             />
           </div>
         </div>
-        {showMobileNav && (
-          <div className="mt-9 flex flex-col items-end transform transition duration-1000 ease-in-out">
+
+        {/* Mobile Navigation with Smooth Height Expansion */}
+        <div
+          className={cn(
+            "overflow-hidden transition-max-height duration-700 ease-in-out",
+            showMobileNav ? "max-h-96" : "max-h-0"
+          )}
+        >
+          <div className="mt-9 flex flex-col items-end pb-6">
             {navLinks.map((link) => (
-              <div className="flex flex-col items-end mt-3 " key={link.label}>
+              <div className="flex flex-col items-end mt-3" key={link.label}>
                 <a
                   href={link.href}
                   className="hover:text-munchorange block transition-colors"
@@ -104,7 +111,7 @@ export default function Navbar() {
               Download the app
             </Button>
           </div>
-        )}
+        </div>
       </header>
     </div>
   );
