@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 export default function Footer() {
   return (
-    <div className="footer_container bg-gray-100">
+    <div className="footer_container">
       <div className="h-100 pt-17 md:pt-15 relative flex flex-col gap-3 font-rubik justify-center items-center text-center font-bold text-3xl md:text-5xl text-white">
         <p>
           Enjoy <span className="text-munchyellow">+3000</span> food from
@@ -211,7 +211,7 @@ export default function Footer() {
               >
                 {/* 07038479738 */}
                 <Image
-                  src={"/icons/Youtube.png"}
+                  src={"/Youtube.png"}
                   width={20}
                   height={20}
                   className="h-6 w-6"

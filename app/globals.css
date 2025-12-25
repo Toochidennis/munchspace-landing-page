@@ -136,7 +136,7 @@
     @apply bg-background text-foreground;
   }
   .footer_container {
-    background-image: url("/images/footer/greenbg.png");
+    background-image: url("/images/footer/greenbg1.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
