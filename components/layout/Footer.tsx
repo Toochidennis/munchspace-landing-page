@@ -82,7 +82,7 @@ export default function Footer() {
                   <li key={item}>
                     <Link
                       href="#"
-                      className="hover:text-munchprimary transition-all duration-300"
+                      className="hover:text-munchorange transition-all duration-300"
                     >
                       {item}
                     </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
                     <li key={city}>
                       <Link
                         href="#"
-                        className="hover:text-munchprimary hover:translate-x-1 transition-all duration-300"
+                        className="hover:text-munchorange hover:translate-x-1 transition-all duration-300"
                       >
                         {city}
                       </Link>
@@ -119,7 +119,7 @@ export default function Footer() {
                     <li key={item}>
                       <Link
                         href="/terms-of-use"
-                        className="hover:text-munchprimary hover:translate-x-1 transition-all duration-300"
+                        className="hover:text-munchorange hover:translate-x-1 transition-all duration-300"
                       >
                         {item}
                       </Link>
@@ -145,7 +145,7 @@ export default function Footer() {
                   <p className="mb-1">Email</p>
                   <a
                     href="mailto:support@munchspace.com"
-                    className="underline text-white hover:text-munchprimary transition-colors"
+                    className="underline text-white hover:text-munchorange transition-colors"
                   >
                     support@munchspace.com
                   </a>
@@ -184,9 +184,9 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
               >
                 <Image
-                  src={"/icons/X.png"}
-                  width={20}
-                  height={20}
+                  src={"/icons/X1.png"}
+                  width={100}
+                  height={100}
                   className="h-6 w-6"
                   alt="x logo"
                 />
@@ -197,9 +197,9 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
               >
                 <Image
-                  src={"/icons/Instagram.png"}
-                  width={20}
-                  height={20}
+                  src={"/icons/Instagram1.png"}
+                  width={100}
+                  height={100}
                   className="h-6 w-6"
                   alt="IG logo"
                 />
@@ -211,9 +211,9 @@ export default function Footer() {
               >
                 {/* 07038479738 */}
                 <Image
-                  src={"/icons/YouTube.png"}
-                  width={20}
-                  height={20}
+                  src={"/icons/YouTube1.png"}
+                  width={100}
+                  height={100}
                   className="h-6 w-6"
                   alt="YT logo"
                 />
@@ -224,9 +224,9 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
               >
                 <Image
-                  src={"/icons/LinkedIn.png"}
-                  width={20}
-                  height={20}
+                  src={"/icons/LinkedIn1.png"}
+                  width={100}
+                  height={100}
                   className="h-6 w-6"
                   alt="LI logo"
                 />

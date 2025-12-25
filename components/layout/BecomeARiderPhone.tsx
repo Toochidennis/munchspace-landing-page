@@ -79,7 +79,7 @@ export default function BecomeARiderPhone() {
 
   return (
     <div>
-      <section className="relative  md:hidden bg-munchprimary mx-3 md:mx-14 rounded-4xl">
+      <section className="relative  md:hidden bg-munchorange mx-3 md:mx-14 rounded-4xl">
         <div className="mx-auto">
           <div className="md:flex gap-20 items-center">
             {/* Fixed phone mockup */}

@@ -24,7 +24,7 @@ const About = () => {
           <Button
             // href={"join-prime-network"}
             variant={"outline"}
-            className="text-munchprimary text-center bg-gray-100 mt-5 border-munchprimary"
+            className="text-munchorange text-center bg-gray-100 mt-5 border-munchprimary"
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
           >
             Learn More About Us
@@ -32,7 +32,7 @@ const About = () => {
         </div>
       </section>
       <section>
-        <div className="bg-munchprimary min-h-100 mx-3 md:mx-14 rounded-3xl md:px-12 md:grid grid-cols-3">
+        <div className="bg-munchorange min-h-100 mx-3 md:mx-14 rounded-3xl md:px-12 md:grid grid-cols-3">
           <div className="px-14">
             <div className="bg-munchprimaryDark min-h-75 max-w-60 mx-auto rounded-b-full relative">
               <Image

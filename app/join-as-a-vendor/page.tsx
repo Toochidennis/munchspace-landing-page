@@ -25,7 +25,7 @@ const JoinAsAVendor = () => {
           <div className="flex gap-5 mt-7">
             <Button
               // href={"join-prime-network"}
-              className="text-white bg-munchprimary text-center border-munchprimary rounded-xl border"
+              className="text-white bg-munchorange text-center border-munchorange rounded-xl border"
               style={{ paddingTop: "20px", paddingBottom: "20px" }}
             >
               <span>Join as a vendor</span>
@@ -33,7 +33,7 @@ const JoinAsAVendor = () => {
             </Button>
             <Button
               variant={"outline"}
-              className="border-munchprimary text-center text-munchprimary rounded-xl"
+              className="border-munchorange text-center text-munchorange rounded-xl"
               style={{ paddingTop: "20px", paddingBottom: "20px" }}
             >
               Login

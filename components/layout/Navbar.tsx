@@ -59,13 +59,13 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="hover:text-munchprimary transition-colors"
+              className="hover:text-munchorange transition-colors"
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <Button className="bg-munchprimary hidden md:block h-11 hover:munchprimaryDark rounded-full px-6">
+        <Button className="bg-munchorange hidden md:block h-11 hover:bg-munchprimaryDark rounded-full px-6">
           Download the app
         </Button>
 
@@ -93,13 +93,13 @@ export default function Navbar() {
             <div className="flex flex-col items-end mt-3 " key={link.label}>
               <a
                 href={link.href}
-                className="hover:text-munchprimary block transition-colors"
+                className="hover:text-munchorange block transition-colors"
               >
                 {link.label}
               </a>
             </div>
           ))}
-          <Button className="bg-munchprimary h-11 mt-4 hover:munchprimaryDark rounded-full px-6">
+          <Button className="bg-munchorange h-11 mt-4 hover:munchprimaryDark rounded-full px-6">
             Download the app
           </Button>
         </div>

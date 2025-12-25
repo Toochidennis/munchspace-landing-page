@@ -133,7 +133,7 @@ export default function BecomeAVendorCarousel() {
                       opportunities designed to help you thrive, on and off the
                       road.
                     </p>
-                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
@@ -152,7 +152,7 @@ export default function BecomeAVendorCarousel() {
                       <br />
                       of your career and earnings.
                     </p>
-                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
@@ -170,7 +170,7 @@ export default function BecomeAVendorCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
@@ -188,7 +188,7 @@ export default function BecomeAVendorCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="text-white bg-munchprimary px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ChevronRight className="w-5 h-5 mt-1" />
                     </button>

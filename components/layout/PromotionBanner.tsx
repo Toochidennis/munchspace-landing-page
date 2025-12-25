@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function PromotionBanner() {
   return (
     <>
-      <section className="hidden md:flex bg-munchprimary font-rubik text-white mt-30 relative overflow-hidden mx-3 rounded-4xl md:mx-14 justify-end my-20">
+      <section className="hidden md:flex bg-munchorange font-rubik text-white mt-30 relative overflow-hidden mx-3 rounded-4xl md:mx-14 justify-end my-20">
         <div className="text-6xl p-10 py-20 font-semibold px-18 absolute left-0 h-full flex items-center">
           <div>
             <h1>
@@ -56,7 +56,7 @@ export default function PromotionBanner() {
           />
         </div>
       </section>
-      <section className="bg-munchprimary mx-5 md:mx-14 rounded-2xl my-10 text-white p-5 mt-30 md:hidden">
+      <section className="bg-munchorange mx-5 md:mx-14 rounded-2xl my-10 text-white p-5 mt-30 md:hidden">
         <Image
           width={500}
           height={250}

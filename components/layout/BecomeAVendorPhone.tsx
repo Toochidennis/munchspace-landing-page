@@ -127,7 +127,7 @@ export default function BecomeAVendorPhone() {
                       opportunities designed to help you thrive, on and off the
                       road.
                     </p>
-                    <button className="bg-munchprimary text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
                   </div>
@@ -145,7 +145,7 @@ export default function BecomeAVendorPhone() {
                       <br />
                       of your career and earnings.
                     </p>
-                    <button className="bg-munchprimary text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
                   </div>
@@ -162,7 +162,7 @@ export default function BecomeAVendorPhone() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="bg-munchprimary text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
                   </div>
@@ -179,7 +179,7 @@ export default function BecomeAVendorPhone() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="bg-munchprimary text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Join the Prime Network{" "}
                       <ChevronRight className="w-5 h-5" />
                     </button>

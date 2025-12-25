@@ -82,7 +82,7 @@ export default function BecomeARiderCarousel() {
 
   return (
     <div>
-      <section className="relative hidden md:block bg-munchprimary mx-3 md:mx-14 rounded-4xl">
+      <section className="relative hidden md:block bg-munchorange mx-3 md:mx-14 rounded-4xl">
         <div className="mx-auto">
           <div className="md:flex gap-20 items-center">
             {/* Fixed phone mockup */}

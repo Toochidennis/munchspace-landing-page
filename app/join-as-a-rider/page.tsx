@@ -15,7 +15,7 @@ const JoinAsARider = () => {
         <div className="basis-2/4">
           <h1 className="text-5xl/15 md:text-7xl/22 font-bold font-rubik">
             Become a{" "}
-            <span className="text-munchprimary block md:inline">
+            <span className="text-munchorange block md:inline">
               Prime <br className="hidden md:inline" /> Delivery{" "}
               <br className="md:hidden" />
             </span>{" "}
@@ -24,7 +24,7 @@ const JoinAsARider = () => {
           <Button
             // href={"join-prime-network"}
             variant={"outline"}
-            className="text-munchprimary text-center mt-3 bg-gray-100 border-munchprimary"
+            className="text-munchorange text-center mt-3 bg-gray-100 border-munchprimary"
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
           >
             <span>Join the Prime Network</span>
