@@ -2,8 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import {
+  ChevronRight,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 import { Button } from "../ui/button";
+import { link } from "fs";
 
 export default function Footer() {
   return (
@@ -74,17 +82,17 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-6">Links of Interest</h3>
               <ul className="space-y-4">
                 {[
-                  "Homepage",
-                  "Join as a Vendor",
-                  "Join as a Rider",
-                  "About MunchSpace",
+                  { name: "Homepage", link: "/" },
+                  { name: "Join as a Vendor", link: "/join-as-a-vendor" },
+                  { name: "Join as a Rider", link: "/join-as-a-rider" },
+                  { name: "About MunchSpace", link: "/about" },
                 ].map((item) => (
-                  <li key={item}>
+                  <li key={item.name}>
                     <Link
-                      href="#"
+                      href={item.link}
                       className="hover:text-munchorange transition-all duration-300"
                     >
-                      {item}
+                      {item.name}
                     </Link>
                   </li>
                 ))}
