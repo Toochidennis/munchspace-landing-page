@@ -12,7 +12,7 @@ import React from "react";
 const JoinAsAVendor = () => {
   return (
     <div className="min-h-screen mt-40 md:mt-23">
-      <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-70 md:mb-0 items-center">
+      <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
         <div className="basis-2/4">
           <h1 className="text-5xl/15 md:text-7xl/22 font-bold font-rubik">
             <span className="text-munchprimary">Elevate</span> Your Food{" "}
@@ -65,8 +65,8 @@ const JoinAsAVendor = () => {
           </h1>
           <p className="mt-5 md:mt-0">
             Take charge of your business, reach more customers,
-            <br className="hidden md:inline" /> and grow your
-            sales with MunchSpace.
+            <br className="hidden md:inline" /> and grow your sales with
+            MunchSpace.
           </p>
         </div>
         <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-30">

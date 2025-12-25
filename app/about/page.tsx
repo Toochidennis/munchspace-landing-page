@@ -11,15 +11,16 @@ import React from "react";
 const About = () => {
   return (
     <div className="min-h-screen mt-40 md:mt-23">
-      <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-20 md:mb-0 items-center">
+      <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-20 md:mb-0 items-center animate-slide-in delay-300">
         <div className="basis-3/4">
           <h1 className="text-5xl/15 md:text-7xl/23 font-bold font-rubik">
             Not Just <span className="text-munchprimary">Orders,</span> <br />{" "}
             <span className="text-munchprimary">We Deliver</span> Experiences
           </h1>
           <p className="mt-3 mb-2 text-gray-600">
-            MunchSpace connects people to what they love — food, essentials, <br className="hidden md:inline" /> and
-            lifestyle services — with speed, care, and a human touch.
+            MunchSpace connects people to what they love — food, essentials,{" "}
+            <br className="hidden md:inline" /> and lifestyle services — with
+            speed, care, and a human touch.
           </p>
           <Button
             // href={"join-prime-network"}
