@@ -35,7 +35,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="max-w-450 mx-auto px-3 md:px-14 fixed top-0 w-full left-0 right-0 z-50 animate-slide-out delay-300">
+    <div className="max-w-450 opacity-0 mx-auto px-3 md:px-14 fixed top-0 w-full left-0 right-0 z-50 animate-slide-out delay-300">
       <header
         className={cn(
           "max-w-450 mx-auto bg-black px-6 py-7 rounded-b-2xl text-white transition-transform duration-700 ease-in-out",
