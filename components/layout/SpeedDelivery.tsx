@@ -21,22 +21,24 @@ const SpeedDelivery = () => {
           </p>
         </div>
       </div>
-      <div className="relative flex justify-center order-3 md:order-2 overflow-x-hidden">
-        <Image
-          src={"/images/fastest-delivery/deliveryguy1.png"}
-          width={500}
-          height={400}
-          alt="delivery guy"
-          className="md:absolute -top-10 min-h-115 md:w-full max-w-120 mx-auto -bottom-10 -ms-5 md:ms-0"
-        />
+      <div className="flex items-center justify-center order-3 md:order-2 overflow-hidden md:-mt-14">
+        <div>
+          <Image
+            src={"/images/fastest-delivery/deliveryguy3.png"}
+            width={1000}
+            height={1400}
+            alt="delivery guy"
+            className="-top-10 min-h-115 md:w-full max-w-120 block mx-auto -bottom-10  md:ms-0"
+          />
+        </div>
       </div>
       <div className="px-5 md:px-0 my-10 md:mt-0 text-white order-2 md:order-3 flex items-center">
         <div className="space-y-6">
           <div className="flex gap-5 items-center">
             <Image
-              src={"/images/fastest-delivery/AI.png"}
-              width={100}
-              height={100}
+              src={"/images/fastest-delivery/AI1.png"}
+              width={200}
+              height={200}
               alt="robot"
               className="w-12 h-12"
             />
@@ -51,9 +53,9 @@ const SpeedDelivery = () => {
           </div>
           <div className="flex gap-5 items-center">
             <Image
-              src={"/images/fastest-delivery/bag.png"}
-              width={100}
-              height={100}
+              src={"/images/fastest-delivery/bag1.png"}
+              width={200}
+              height={200}
               alt="robot"
               className="w-12 h-12"
             />
