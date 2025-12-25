@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="text-3xl font-bold">
+        <a href="/" className="text-3xl font-bold">
           <Image
             src="/images/logo.svg"
             width={300}
@@ -51,7 +51,7 @@ export default function Navbar() {
             className="w-20"
             alt="logo"
           />
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center text-sm space-x-8">
