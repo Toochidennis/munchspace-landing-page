@@ -81,9 +81,9 @@ export default function BecomeAVendorCarousel() {
   const slideCount = phoneScreenImages.length;
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-">
       <section
-        className="relative hidden md:block bg-cover rounded-4xl md:py-20 md:pt-40 lg:px-20"
+        className="relative hidden overflow-x-hidden md:block bg-cover rounded-4xl md:py-20 md:pt-40 lg:px-20"
         id="everythingvendor"
       >
         <div>

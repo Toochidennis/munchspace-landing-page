@@ -69,7 +69,7 @@ export default function PromotionBanner() {
           height={250}
           src={"/images/rectangle.png"}
           alt="app store"
-          className="mb-5 -mt-10"
+          className="-mt-15"
         />
         <div className="p-5">
           <h1 className="text-[1.6rem] font-semibold font-rubik">

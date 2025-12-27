@@ -12,7 +12,7 @@ import React from "react";
 const JoinAsAVendor = () => {
   return (
     <div className="mt-40 md:mt-20 lg:mt-23 w-full">
-      <section className="md:flex justify-between bg-red-200 mx-3 md:mx-7 lg:mx-14 md:min-h-90 lg:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
+      <section className="md:flex justify-between mx-3 md:mx-7 lg:mx-14 md:min-h-90 lg:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
         <div className="basis-3/5 lg:basis-2/4">
           <h1 className="text-5xl/15 md:text-5xl/15 lg:text-7xl/22 font-bold font-rubik">
             <span className="text-munchprimary">Elevate</span> Your Food{" "}
