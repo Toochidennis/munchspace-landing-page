@@ -11,9 +11,9 @@ import React from "react";
 const JoinAsARider = () => {
   return (
     <div className="min-h-screen mt-40 md:mt-23">
-      <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
-        <div className="basis-2/4">
-          <h1 className="text-5xl/15 md:text-7xl/22 font-bold font-rubik">
+      <section className="md:flex justify-between mx-3 md:mx-7 lg:mx-14 md:min-h-100 lg:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
+        <div className="basis-3/5 lg:basis-2/4">
+          <h1 className="text-5xl/15 md:text-5xl/15 lg:text-7xl/22 font-bold font-rubik">
             Become a{" "}
             <span className="text-munchorange block md:inline">
               Prime <br className="hidden md:inline" /> Delivery{" "}
@@ -31,20 +31,20 @@ const JoinAsARider = () => {
             <ArrowRight />
           </Button>
         </div>
-        <div className="basis-2/4 hidden md:flex justify-end items-end self-end me-4 -mb-10">
+        <div className="basis-2/5 lg:basis-2/4 hidden md:flex justify-end items-end self-end lg:me-4 -mb-10">
           <Image
             src={"/images/rider/rider1.png"}
             width={900}
             height={800}
-            className="block max-w-120"
+            className="block max-w-70 lg:max-w-120"
             alt="rider"
           />
         </div>
       </section>
       <BecomeARiderCarousel />
-      <div className="mx-3 md:mx-14 my-20">
+      <div className="mx-3 md:mx-7 lg:mx-14 my-20">
         <div className="md:flex justify-between items-center">
-          <h1 className="font-rubik text-4xl font-semibold">
+          <h1 className="font-rubik text-4xl md:text-2xl lg:text-4xl font-semibold">
             Join the Prime <br /> Network in 3 Steps
           </h1>
           <p className="mt-5 md:mt-0">
@@ -53,8 +53,8 @@ const JoinAsARider = () => {
             the city.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-30">
-          <div className="px-10">
+        <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-5 lg:gap-30">
+          <div className="px-10 md:px-3 lg:px-10">
             <Image
               width={1000}
               height={1000}
@@ -71,13 +71,13 @@ const JoinAsARider = () => {
             </p>
             <Link
               href={"/"}
-              className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg"
+              className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg md:text-base lg:text-lg"
             >
               Register Now
               <ChevronRight className="h-5 w-5" strokeWidth={3} />
             </Link>
           </div>
-          <div className="px-10">
+          <div className="px-10 md:px-3 lg:px-10">
             <Image
               width={1000}
               height={1000}
@@ -94,13 +94,13 @@ const JoinAsARider = () => {
             </p>
             <Link
               href={"/"}
-              className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg"
+              className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg md:text-base lg:text-lg"
             >
               Register Now
               <ChevronRight className="h-5 w-5" strokeWidth={3} />
             </Link>
           </div>
-          <div className="px-10">
+          <div className="px-10 md:px-3 lg:px-10">
             <Image
               width={1000}
               height={1000}
@@ -108,7 +108,7 @@ const JoinAsARider = () => {
               className="mx-auto"
               src={"/images/join/31.png"}
             />
-            <h3 className="font-semibold font-rubik text-center whitespace-nowrap text-2xl mt-7">
+            <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Local Markets Delivery
             </h3>
             <p className="text-sm text-center my-2">
@@ -116,7 +116,7 @@ const JoinAsARider = () => {
             </p>
             <Link
               href={"/"}
-              className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg"
+              className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg md:text-base lg:text-lg"
             >
               Register Now
               <ChevronRight className="h-5 w-5" strokeWidth={3} />

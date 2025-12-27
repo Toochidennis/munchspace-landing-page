@@ -81,10 +81,10 @@ export default function BecomeARiderCarousel() {
   const slideCount = phoneScreenImages.length;
 
   return (
-    <div>
-      <section className="relative hidden md:block bg-munchorange mx-3 md:mx-14 rounded-4xl">
+    <div className="px-3 md:px-7 lg:px-14">
+      <section className="relative hidden md:block bg-munchorange  rounded-4xl">
         <div className="mx-auto">
-          <div className="md:flex gap-20 items-center">
+          <div className="md:flex gap-20 md:gap-6 lg:gap-20 items-center">
             {/* Fixed phone mockup */}
             <div className="relative flex">
               <Image
@@ -94,7 +94,7 @@ export default function BecomeARiderCarousel() {
                 height={200}
                 className="object-contain w-23 -right-16 -top-44 absolute"
               />
-              <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/19 rounded-4xl mb-15 -mt-50 md:-mt-25 bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
+              <div className="relative w-4/6 mx-auto md:ms-7 lg:ms-20 md:w-50 lg:w-80 max-h-150 aspect-5/9 lg:aspect-9/19 rounded-4xl mb-15 -mt-50 md:-mt-25 bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
                 {/* Carousel for phone screen images */}
                 <div
                   className="absolute inset-0 rounded-2xl overflow-hidden"
@@ -121,23 +121,23 @@ export default function BecomeARiderCarousel() {
             </div>
 
             {/* Text carousel */}
-            <div className="md:text-left text-white ">
-              <div className="overflow-hidden pb-18 md:pb-0" ref={textEmblaRef}>
+            <div className="md:text-left text-white overflow-x-hidden w-full">
+              <div className="overflow-hidden pb-18 md:pt-5 lg:py-0" ref={textEmblaRef}>
                 <div className="flex">
                   {/* Slide 1 */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-4xl/14 lg:text-6xl/20 font-semibold mb-6 md:mb-3 lg:mb-6 font-rubik">
                       Unlock your full
                       <br />
                       potential
                     </h1>
-                    <p className="md:text-xl mb-8 opacity-90">
+                    <p className="lg:text-xl mb-8 md:mb-3 lg:mb-8 opacity-90">
                       Build independence, gain financial freedom, and unlock
                       <br />
                       opportunities designed to help you thrive, on and off the
                       road.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-munchorange bg-white px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg md:text-base lg:text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Join the Prime Network{" "}
                       <ChevronRight className="w-5 h-5" />
                     </button>
@@ -145,18 +145,18 @@ export default function BecomeARiderCarousel() {
 
                   {/* Slide 2 */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-4xl/14 lg:text-6xl/20 font-semibold mb-6 md:mb-3 lg:mb-6 font-rubik">
                       Track your progress,
-                      <br />
+                      <br className="md:hidden lg:inline-block" /> {""}
                       earn more
                     </h1>
-                    <p className="md:text-xl mb-8 opacity-90">
+                    <p className="lg:text-xl mb-8 md:mb-3 lg:mb-8 opacity-90">
                       Access premium loads, better pay, and tools that put you
                       in control
-                      <br />
+                      <br className="md:hidden lg:inline-block" />
                       of your career and earnings.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-munchorange bg-white px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg md:text-base lg:text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Join the Prime Network{" "}
                       <ChevronRight className="w-5 h-5" />
                     </button>
@@ -164,17 +164,17 @@ export default function BecomeARiderCarousel() {
 
                   {/* Slide 3 */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-4xl/14 lg:text-6xl/20 font-semibold mb-6 md:mb-3 lg:mb-6 font-rubik">
                       Instant cash-out,
                       <br />
                       no stress
                     </h1>
-                    <p className="md:text-xl mb-8 opacity-90">
-                      Join a network built for drivers—flexible opportunities,
-                      <br />
+                    <p className="lg:text-xl mb-8 md:mb-3 lg:mb-8 opacity-90">
+                      Join a network built for drivers—flexible opportunities,{" "}
+                      <br className="md:hidden lg:inline-block" />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-munchorange bg-white px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg md:text-base lg:text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Join the Prime Network{" "}
                       <ChevronRight className="w-5 h-5" />
                     </button>
@@ -182,17 +182,16 @@ export default function BecomeARiderCarousel() {
 
                   {/* Slide 4 - Newly added */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-4xl/14 lg:text-6xl/20 font-semibold mb-6 md:mb-3 lg:mb-6 font-rubik">
                       You rise, we've got
-                      <br />
-                      your back
+                      <br className="md:hidden lg:inline-block" /> your back
                     </h1>
-                    <p className="md:text-xl mb-8 opacity-90">
-                      Join a network built for drivers—flexible opportunities,
-                      <br />
+                    <p className="lg:text-xl mb-8 md:mb-3 lg:mb-8 opacity-90">
+                      Join a network built for drivers—flexible opportunities,{" "}
+                      <br className="md:hidden lg:inline-block" />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="bg-white text-orange-600 px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-munchorange bg-white px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg md:text-base lg:text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       Join the Prime Network{" "}
                       <ChevronRight className="w-5 h-5" />
                     </button>

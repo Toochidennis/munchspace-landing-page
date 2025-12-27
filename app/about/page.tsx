@@ -11,9 +11,9 @@ import React from "react";
 const About = () => {
   return (
     <div className="min-h-screen mt-40 md:mt-23">
-      <section className="md:flex justify-between mx-3 md:mx-14 md:min-h-160 mb-20 md:mb-0 items-center animate-slide-in delay-300">
-        <div className="basis-3/4">
-          <h1 className="text-5xl/15 md:text-7xl/23 font-bold font-rubik">
+      <section className="md:flex justify-between mx-3 md:mx-7 lg:mx-14 md:min-h-160 mb-20 md:mb-0 items-center animate-slide-in delay-300">
+        <div className="basis-3/4 md:basis-4/4 lg:basis-3/4">
+          <h1 className="text-5xl/15 md:text-5xl/15 lg:text-7xl/22 font-bold font-rubik">
             Not Just <span className="text-munchprimary">Orders,</span> <br />{" "}
             <span className="text-munchprimary">We Deliver</span> Experiences
           </h1>
@@ -33,8 +33,8 @@ const About = () => {
         </div>
       </section>
       <section>
-        <div className="bg-munchorange min-h-100 mx-3 md:mx-14 rounded-3xl md:px-12 md:grid grid-cols-3">
-          <div className="px-14">
+        <div className="bg-munchorange min-h-100 mx-3 md:mx-7 lg:mx-14 rounded-3xl md:px-12 md:grid grid-cols-3">
+          <div className="px-14 md:px-0 lg:px14">
             <div className="bg-munchprimaryDark min-h-75 max-w-60 mx-auto rounded-b-full relative">
               <Image
                 src={"/images/about/pakage.png"}
@@ -45,7 +45,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="text-white col-span-2 p-7 mt-4 md:mt-0 md:p-12 flex items-center">
+          <div className="text-white col-span-2 p-7 mt-4 md:mt-0 lg:p-12 flex items-center">
             <div>
               <h1 className="text-4xl font-rubik font-semibold">Who We Are</h1>
               <p className="mt-5">
@@ -66,14 +66,14 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="mx-3 md:mx-14 my-25">
+      <div className="mx-3 md:mx-7 lg:mx-14 my-25">
         <div className="text-center text-4xl font-rubik font-semibold">
           <h1>
             Our <span className="text-munchprimary">Core</span> Values
           </h1>
         </div>
-        <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-30">
-          <div className="px-10">
+        <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-5 lg:gap-30">
+          <div className="px-10 md:px-3 lg:px-10">
             <Image
               width={1000}
               height={1000}
@@ -89,7 +89,7 @@ const About = () => {
               respect.
             </p>
           </div>
-          <div className="px-10">
+          <div className="px-10 md:px-3 lg:px-10">
             <Image
               width={1000}
               height={1000}
@@ -105,7 +105,7 @@ const About = () => {
               memorable.
             </p>
           </div>
-          <div className="px-10">
+          <div className="px-10 md:px-3 lg:px-10">
             <Image
               width={1000}
               height={1000}
@@ -113,7 +113,7 @@ const About = () => {
               className="mx-auto"
               src={"/images/about/31.png"}
             />
-            <h3 className="font-semibold font-rubik text-center whitespace-nowrap text-2xl mt-7">
+            <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Empowerment for All
             </h3>
             <p className="text-sm text-center my-2">

@@ -81,13 +81,13 @@ export default function BecomeAVendorCarousel() {
   const slideCount = phoneScreenImages.length;
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <section
-        className="relative hidden md:block bg-cover rounded-4xl md:py-20 md:pt-40 md:px-20"
+        className="relative hidden md:block bg-cover rounded-4xl md:py-20 md:pt-40 lg:px-20"
         id="everythingvendor"
       >
-        <div className="mx-auto">
-          <div className="md:flex gap-20 items-center">
+        <div>
+          <div className="md:flex gap-20 md:gap-6 lg:gap-20  items-center ">
             {/* Fixed phone mockup */}
             <div className="relative flex">
               <Image
@@ -95,9 +95,9 @@ export default function BecomeAVendorCarousel() {
                 alt="Crown"
                 width={200}
                 height={200}
-                className="object-contain w-23 -right-16 -top-18 absolute"
+                className="object-contain w-16 md:w-23 -right-16 -top-18 absolute"
               />
-              <div className="relative w-4/6 mx-auto md:ms-20 md:w-80 max-h-150 aspect-5/9 md:aspect-9/16 rounded-4xl bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
+              <div className="relative w-4/6 mx-auto md:ms-7 lg:ms-20 md:w-50 lg:w-80 max-h-150 aspect-5/9 lg:aspect-9/16 rounded-4xl bg-gray-200 border-5 md:border-8 border-black overflow-hidden">
                 {/* Carousel for phone screen images */}
                 <div
                   className="absolute inset-0 rounded-2xl overflow-hidden"
@@ -124,23 +124,25 @@ export default function BecomeAVendorCarousel() {
             </div>
 
             {/* Text carousel */}
-            <div className="md:text-left text-white ">
+            <div className="md:text-left text-white">
               <div className="overflow-hidden pb-18 md:pb-0" ref={textEmblaRef}>
                 <div className="flex">
                   {/* Slide 1 */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-5xl/17 lg:text-6xl/20 font-semibold mb-6 font-rubik">
                       Unlock your full
                       <br />
                       potential
                     </h1>
                     <p className="md:text-xl mb-8 opacity-90">
-                      Build independence, gain financial freedom, and unlock
-                      <br />
-                      opportunities designed to help you thrive, on and off the
-                      road.
+                      Build independence, gain financial freedom,{" "}
+                      <br className="hidden md:inline lg:hidden" /> and unlock
+                      <br className="md:hidden lg:inline" />
+                      opportunities designed to help you{" "}
+                      <br className="hidden md:inline lg:hidden" /> thrive, on
+                      and off the road.
                     </p>
-                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
@@ -148,18 +150,19 @@ export default function BecomeAVendorCarousel() {
 
                   {/* Slide 2 */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-5xl/17 lg:text-6xl/20 font-semibold mb-6 font-rubik">
                       Track your progress,
                       <br />
                       earn more
                     </h1>
                     <p className="md:text-xl mb-8 opacity-90">
-                      Access premium loads, better pay, and tools that put you
-                      in control
-                      <br />
+                      Access premium loads, better pay, and tools that put{" "}
+                      <br className="hidden md:inline lg:hidden" /> you in
+                      control
+                      <br className="md:hidden lg:inline" />
                       of your career and earnings.
                     </p>
-                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
@@ -167,7 +170,7 @@ export default function BecomeAVendorCarousel() {
 
                   {/* Slide 3 */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-5xl/17 lg:text-6xl/20 font-semibold mb-6 font-rubik">
                       Instant cash-out,
                       <br />
                       no stress
@@ -177,7 +180,7 @@ export default function BecomeAVendorCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ArrowRight className="w-5 h-5 mt-1" />
                     </button>
@@ -185,7 +188,7 @@ export default function BecomeAVendorCarousel() {
 
                   {/* Slide 4 - Newly added */}
                   <div className="flex-none w-full min-w-0 px-4">
-                    <h1 className="text-3xl md:text-6xl/20 font-semibold mb-6 font-rubik">
+                    <h1 className="text-3xl md:text-5xl/17 lg:text-6xl/20 font-semibold mb-6 font-rubik">
                       You rise, we've got
                       <br />
                       your back
@@ -195,7 +198,7 @@ export default function BecomeAVendorCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="text-white bg-munchorange px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
                       join as a Vendor
                       <ChevronRight className="w-5 h-5 mt-1" />
                     </button>

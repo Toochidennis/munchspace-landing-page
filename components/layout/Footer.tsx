@@ -16,7 +16,7 @@ import { link } from "fs";
 export default function Footer() {
   return (
     <div className="footer_container">
-      <div className="h-100 pt-17 md:pt-15 relative flex flex-col gap-3 font-rubik justify-center items-center text-center font-bold text-3xl md:text-5xl text-white">
+      <div className="h-100 md:h-75 lh:h-100 pt-17 md:pt-5 lg:mt-15 relative flex flex-col gap-3 font-rubik justify-center items-center text-center font-bold text-3xl md:text-3xl lg:text-5xl text-white">
         <p>
           Enjoy <span className="text-munchyellow">+3000</span> food from
         </p>
@@ -24,7 +24,7 @@ export default function Footer() {
           <span className="text-munchyellow">+500</span> Restaurants
         </p>
         <Button
-          className="rounded-full py-2 h-11 mt-5"
+          className="rounded-full py-2 h-11 md:h-9 lg:h-11 mt-5"
           style={{ paddingRight: "20px", paddingLeft: "20px" }}
         >
           Order Now
@@ -35,52 +35,52 @@ export default function Footer() {
           width={300}
           height={300}
           alt="chiken republic logo"
-          className="w-20 absolute left-22 top-40 hidden md:block"
+          className="w-20 md:w-14 lg:w-20 absolute lg:left-22 md:left-8 top-40 hidden md:block"
         />
         <Image
           src={"/images/footer/dp.png"}
           width={300}
           height={300}
           alt="chiken republic logo"
-          className="w-17 absolute left-53 top-20 hidden md:block"
+          className="w-17 md:w-11 lg:w-17 absolute lg:left-53 left-33 top-20 hidden md:block"
         />
         <Image
           src={"/images/footer/ddp.png"}
           width={300}
           height={300}
           alt="chiken republic logo"
-          className="w-12 absolute left-60 top-60 hidden md:block"
+          className="w-12 md:w-9 lg:w-12 absolute lg:left-60 left-40 top-60 hidden md:block"
         />
         <Image
           src={"/images/footer/sr.png"}
           width={300}
           height={300}
           alt="chiken republic logo"
-          className="w-15 absolute right-60 top-30 hidden md:block"
+          className="w-15 md:w-9 lg:w-15 absolute right-40 lg:right-60 top-40 lg:top-30 hidden md:block"
         />
         <Image
           src={"/images/footer/kfc.png"}
           width={300}
           height={300}
           alt="chiken republic logo"
-          className="w-20 absolute right-30 top-20 hidden md:block"
+          className="w-20 md:w-14 lg:w-20 absolute right-20 lg:right-30 top-20 hidden md:block"
         />
         <Image
           src={"/images/footer/bk.png"}
           width={300}
           height={300}
           alt="chiken republic logo"
-          className="w-15 absolute right-35 top-55 hidden md:block"
+          className="w-15 md:w-9 lg:w-15 absolute right-22 lg:right-35 top-55 hidden md:block"
         />
       </div>
-      <footer className="bg-black text-white py-12 md:py-10 mx-5 md:mx-14 rounded-t-2xl">
-        <div className="mx-auto md:px-12">
+      <footer className="bg-black text-white py-12 md:py-10 mx-5 md:mx-7 lg:mx-14 rounded-t-2xl">
+        <div className="mx-auto md:px-3 lg:px-12">
           {/* Main Footer Grid */}
-          <div className="grid px-4 md:px-0 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+          <div className="grid px-4 md:px-0 md:grid-cols-4 gap-8 md:gap-1 lg:gap-12 mb-12">
             {/* Links of Interest */}
             <div>
               <h3 className="text-lg font-semibold mb-6">Links of Interest</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4 md:text-sm lg:text-base">
                 {[
                   { name: "Homepage", link: "/" },
                   { name: "Join as a Vendor", link: "/join-as-a-vendor" },
@@ -102,7 +102,7 @@ export default function Footer() {
             {/* Locations */}
             <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6">Locations</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4 md:text-sm lg:text-base">
                 {["Enugu", "Abuja", "Lagos", "Jos", "Kano", "Warri"].map(
                   (city) => (
                     <li key={city}>
@@ -121,7 +121,7 @@ export default function Footer() {
             {/* Legals */}
             <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6 ">Legals</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4 md:text-sm lg:text-base">
                 {["Terms of Use", "Privacy Policy", "Compliance"].map(
                   (item) => (
                     <li key={item}>
@@ -140,7 +140,7 @@ export default function Footer() {
             {/* Customer Service */}
             <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6">Customer Service</h3>
-              <div className="space-y-6 text-gray-400">
+              <div className="space-y-6 text-gray-400 md:text-sm lg:text-base">
                 <div>
                   <p className="mb-1">Service Hours</p>
                   <p className="text-white">Monday - Saturday 8:30AM to 8PM</p>
@@ -174,7 +174,7 @@ export default function Footer() {
                 alt="MunchSpace Logo"
                 width={250}
                 height={200}
-                className="w-20 md:w-30 "
+                className="w-20 md:w-30"
               />
             </div>
 
