@@ -38,7 +38,7 @@ export default function PromotionBanner() {
               </Link>
             </div>
             <Link
-              href="/terms-and-condition"
+              href="/terms-of-use"
               className="font-light underline text-sm flex gap-1 items-center mt-7 w-fit"
             >
               <Info className="w-4" />
