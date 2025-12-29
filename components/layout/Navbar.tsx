@@ -98,7 +98,7 @@ export default function Navbar() {
             showMobileNav ? "max-h-96" : "max-h-0"
           )}
         >
-          <div className="mt-9 flex flex-col items-end pb-3">
+          <div className="mt-9 flex flex-col items-end pb-1">
             {navLinks.map((link) => (
               <div className="flex flex-col items-end mt-3" key={link.label}>
                 <a
@@ -116,7 +116,7 @@ export default function Navbar() {
                   height={500}
                   src={"/images/appstoredownload1.png"}
                   alt="app store"
-                  className="w-40 h-15 md:w-27 md:h-10 lg:w-40 lg:h-15"
+                  className=""
                 />
               </Link>
               <Link href="/" className="hover:scale-105">
@@ -125,7 +125,7 @@ export default function Navbar() {
                   height={500}
                   src={"/images/playstoredownload1.png"}
                   alt="app store"
-                  className="w-40 h-15 md:w-27 md:h-10 lg:w-40 lg:h-15"
+                  className=" "
                 />
               </Link>
             </div>
