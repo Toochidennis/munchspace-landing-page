@@ -28,7 +28,7 @@ export default function BecomeARiderCarousel() {
   useEffect(() => {
     if (!phoneEmblaApi || !textEmblaApi) return;
 
-    const syncCarousels = (mainApi:any, secondaryApi:any) => {
+    const syncCarousels = (mainApi: any, secondaryApi: any) => {
       const selectedIndex = mainApi.selectedScrollSnap();
       secondaryApi.scrollTo(selectedIndex);
     };
@@ -82,6 +82,13 @@ export default function BecomeARiderCarousel() {
 
   return (
     <div className="px-3 md:px-7 lg:px-14">
+      <Image
+        width={1500}
+        height={500}
+        src={"/images/ellipse2.png"}
+        alt="app store"
+        className="absolute right-0 h-15 -mt-20 w-12 hidden md:block"
+      />
       <section className="relative hidden md:block bg-munchorange  rounded-4xl">
         <div className="mx-auto">
           <div className="md:flex gap-20 md:gap-6 lg:gap-20 items-center">
@@ -122,7 +129,10 @@ export default function BecomeARiderCarousel() {
 
             {/* Text carousel */}
             <div className="md:text-left text-white overflow-x-hidden w-full">
-              <div className="overflow-hidden pb-18 md:pt-5 lg:py-0" ref={textEmblaRef}>
+              <div
+                className="overflow-hidden pb-18 md:pt-5 lg:py-0"
+                ref={textEmblaRef}
+              >
                 <div className="flex">
                   {/* Slide 1 */}
                   <div className="flex-none w-full min-w-0 px-4">

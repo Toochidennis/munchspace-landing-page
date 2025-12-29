@@ -4,7 +4,14 @@ import React from "react";
 
 const DownloadApp = () => {
   return (
-    <>
+    <div>
+      <Image
+        width={1500}
+        height={500}
+        src={"/images/ellipse2.png"}
+        alt="app store"
+        className="absolute right-0 h-15 -mt-10 w-12 hidden md:block"
+      />
       <div
         className="my-20 hidden md:block relative mx-3 md:mx-7 lg:mx-14"
         id="promotion"
@@ -79,7 +86,7 @@ const DownloadApp = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

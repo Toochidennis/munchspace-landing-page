@@ -32,7 +32,14 @@ const About = () => {
           </Button>
         </div>
       </section>
-      <section>
+      <section className="relative">
+        <Image
+          width={1500}
+          height={500}
+          src={"/images/ellipse2.png"}
+          alt="app store"
+          className="absolute right-0 h-15 -mt-20 w-12 hidden md:block"
+        />
         <div className="bg-munchorange min-h-100 mx-3 md:mx-7 lg:mx-14 rounded-3xl md:px-12 md:grid grid-cols-3">
           <div className="px-14 md:px-0 lg:px14">
             <div className="bg-munchprimaryDark min-h-75 max-w-60 mx-auto rounded-b-full relative">
