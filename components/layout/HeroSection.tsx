@@ -7,16 +7,15 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 md:pb-9 mt-25 md:mt-10 ">
+    <section className="relative overflow-hidden py-16 md:py-24 md:pb-9 mt-30 md:mt-10">
       {/* Subtle decorative circles */}
-      <div className="absolute top-40 left-5 w-40 h-40 bg-[#FBE8D9] rounded-full opacity-50 animate-slide-in"></div>
+      <div className="absolute top-10 md:top-40 -left-20 md:left-5 w-40 h-40 bg-[#FBE8D9] rounded-full opacity-50 animate-slide-in"></div>
       <Image
         src="/images/geating.png"
         alt="Happy customer enjoying pizza delivery"
         width={450}
         height={500}
         className="w-40 right-0 absolute md:hidden"
-        //   priority
       />
       {/* <div className="absolute bottom-0 right-20 w-32 h-32 bg-green-200 rounded-full opacity-40 animate-slide-in delay-200"></div>
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-yellow-100 rounded-full opacity-30 -translate-y-1/2 animate-slide-in delay-300"></div> */}
