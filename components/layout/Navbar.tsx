@@ -98,7 +98,7 @@ export default function Navbar() {
             showMobileNav ? "max-h-96" : "max-h-0"
           )}
         >
-          <div className="mt-9 flex flex-col items-end pb-6">
+          <div className="mt-9 flex flex-col items-end pb-3">
             {navLinks.map((link) => (
               <div className="flex flex-col items-end mt-3" key={link.label}>
                 <a
@@ -109,11 +109,26 @@ export default function Navbar() {
                 </a>
               </div>
             ))}
-            <a href={"/"}>
-              <Button className="bg-munchorange hidden md:block h-11 hover:bg-munchprimaryDark rounded-full px-6 cursor-pointer">
-                Download the app
-              </Button>
-            </a>
+            <div className="mt-10 flex gap-5">
+              <Link href="/" className="hover:scale-105">
+                <Image
+                  width={1000}
+                  height={500}
+                  src={"/images/appstoredownload1.png"}
+                  alt="app store"
+                  className="w-40 h-15 md:w-27 md:h-10 lg:w-40 lg:h-15"
+                />
+              </Link>
+              <Link href="/" className="hover:scale-105">
+                <Image
+                  width={1000}
+                  height={500}
+                  src={"/images/playstoredownload1.png"}
+                  alt="app store"
+                  className="w-40 h-15 md:w-27 md:h-10 lg:w-40 lg:h-15"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </header>

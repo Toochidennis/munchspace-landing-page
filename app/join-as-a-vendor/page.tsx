@@ -70,12 +70,12 @@ const JoinAsAVendor = () => {
             <br className="hidden md:inline" /> and grow your sales with
             MunchSpace.
           </p>
-          <div className="h-40 w-40 absolute rounded-full bg-[#FFF1C6] -right-25 -top-13 -z-10"></div>
+          <div className="h-40 w-40 absolute rounded-full bg-[#FFF1C6] -right-25 -top-13 -z-10 hidden md:block"></div>
           <Image
             src={"/images/join/road.png"}
             width={400}
             height={400}
-            className="block absolute w-30 right-0 mt-10"
+            className="block absolute w-30 right-0 mt-10 hidden md:block"
             alt="chef"
           />
         </div>
