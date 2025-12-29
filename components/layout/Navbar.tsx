@@ -66,9 +66,11 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-          <Button className="bg-munchorange hidden md:block h-11 hover:bg-munchprimaryDark rounded-full px-6">
-            Download the app
-          </Button>
+          <a href={"/"}>
+            <Button className="bg-munchorange hidden md:block h-11 hover:bg-munchprimaryDark rounded-full px-6 cursor-pointer">
+              Download the app
+            </Button>
+          </a>
 
           {/* Mobile Menu Trigger */}
           <div className="md:hidden">
@@ -107,9 +109,11 @@ export default function Navbar() {
                 </a>
               </div>
             ))}
-            <Button className="bg-munchorange h-11 mt-4 hover:munchprimaryDark rounded-full px-6">
-              Download the app
-            </Button>
+            <a href={"/"}>
+              <Button className="bg-munchorange hidden md:block h-11 hover:bg-munchprimaryDark rounded-full px-6 cursor-pointer">
+                Download the app
+              </Button>
+            </a>
           </div>
         </div>
       </header>

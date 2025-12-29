@@ -12,8 +12,8 @@ import React from "react";
 const JoinAsAVendor = () => {
   return (
     <div className="mt-40 md:mt-20 lg:mt-23 w-full">
-      <section className="md:flex justify-between mx-3 md:mx-7 lg:mx-14 md:min-h-90 lg:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
-        <div className="basis-3/5 lg:basis-2/4">
+      <section className="md:flex justify-between md:min-h-90 lg:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
+        <div className="basis-3/5 lg:basis-2/4 mx-3 md:mx-7 lg:mx-14">
           <h1 className="text-5xl/15 md:text-5xl/15 lg:text-7xl/22 font-bold font-rubik">
             <span className="text-munchprimary">Elevate</span> Your Food{" "}
             <span className="text-munchprimary">Business</span>
@@ -42,24 +42,17 @@ const JoinAsAVendor = () => {
         </div>
         <div className="basis-2/5 lg:basis-2/4 hidden md:flex justify-end items-end self-end -mb-10">
           <Image
-            src={"/images/vendor/vendor.png"}
+            src={"/images/vendor/vendor1.png"}
             width={900}
             height={800}
-            className="block max-w-50 me-40 lg:max-w-120"
-            alt="rider"
-          />
-          <Image
-            src={"/images/vendor/vendor.png"}
-            width={900}
-            height={800}
-            className="block absolute max-w-50 lg:max-w-120"
-            alt="rider"
+            className="block absolute max-w-50 lg:max-w-160"
+            alt="chef"
           />
         </div>
       </section>
       <BecomeAVendorCarousel />
-      <div className="mx-3 md:mx-7 lg:mx-14 my-20">
-        <div className="md:flex justify-between items-center">
+      <div className="my-20 bg-gray- relative">
+        <div className="mx-3 md:mx-7 lg:mx-14 md:flex justify-between items-center">
           <h1 className="font-rubik text-4xl md:text-2xl lg:text-4xl font-semibold">
             Join as a Vendor in <br /> 3 simple steps
           </h1>
@@ -68,6 +61,14 @@ const JoinAsAVendor = () => {
             <br className="hidden md:inline" /> and grow your sales with
             MunchSpace.
           </p>
+          <div className="h-40 w-40 absolute rounded-full bg-[#FFF1C6] -right-25 -top-13 -z-10"></div>
+          <Image
+            src={"/images/join/road.png"}
+            width={400}
+            height={400}
+            className="block absolute w-30 right-0 mt-10"
+            alt="chef"
+          />
         </div>
         <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-5 lg:gap-30">
           <div className="px-10 md:px-3 lg:px-10">

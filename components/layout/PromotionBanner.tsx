@@ -6,7 +6,14 @@ import Link from "next/link";
 
 export default function PromotionBanner() {
   return (
-    <>
+    <div className="relative">
+      <Image
+        width={1500}
+        height={500}
+        src={"/images/ellipse1.png"}
+        alt="app store"
+        className="absolute right-0 h-15 -mt-30 w-12"
+      />
       <section className="hidden md:flex bg-munchorange font-rubik text-white mt-30 relative overflow-hidden mx-3 rounded-4xl md:mx-7 lg:mx-14 justify-end my-20">
         <div className="text-6xl md:text-3xl lg:text-6xl p-10 py-20 font-semibold px-18 md:px-7 lg:px-18 absolute left-0 h-full flex items-center">
           <div>
@@ -110,6 +117,6 @@ export default function PromotionBanner() {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

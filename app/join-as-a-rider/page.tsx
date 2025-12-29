@@ -10,7 +10,7 @@ import React from "react";
 
 const JoinAsARider = () => {
   return (
-    <div className="min-h-screen mt-40 md:mt-23">
+    <div className="min-h-screen mt-40 md:mt-23 overflow-x-hidden">
       <section className="md:flex justify-between mx-3 md:mx-7 lg:mx-14 md:min-h-100 lg:min-h-160 mb-70 md:mb-0 items-center animate-slide-in delay-300">
         <div className="basis-3/5 lg:basis-2/4">
           <h1 className="text-5xl/15 md:text-5xl/15 lg:text-7xl/22 font-bold font-rubik">
@@ -42,8 +42,8 @@ const JoinAsARider = () => {
         </div>
       </section>
       <BecomeARiderCarousel />
-      <div className="mx-3 md:mx-7 lg:mx-14 my-20">
-        <div className="md:flex justify-between items-center">
+      <div className="my-20 bg-gray- relative">
+        <div className="mx-3 md:mx-7 lg:mx-14 md:flex justify-between items-center">
           <h1 className="font-rubik text-4xl md:text-2xl lg:text-4xl font-semibold">
             Join the Prime <br /> Network in 3 Steps
           </h1>
@@ -52,6 +52,14 @@ const JoinAsARider = () => {
             <br className="hidden md:inline" /> of a delivery force that moves
             the city.
           </p>
+          <div className="h-40 w-40 absolute rounded-full bg-[#FFF1C6] -right-25 -top-13 -z-10"></div>
+          <Image
+            src={"/images/join/road.png"}
+            width={400}
+            height={400}
+            className="block absolute w-30 right-0 mt-10"
+            alt="chef"
+          />
         </div>
         <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-5 lg:gap-30">
           <div className="px-10 md:px-3 lg:px-10">
