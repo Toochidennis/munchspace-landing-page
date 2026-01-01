@@ -17,6 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # install
       - name: Install dependencies
         run: npm ci
 
