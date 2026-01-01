@@ -1,30 +1,41 @@
-name: Next.js CI
+name: Deploy Landing Page
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
-  build-and-lint:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
+      # If you have a build step (React/Vite/etc)
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linting
-        run: npm run lint
-        continue-on-error: true
-      - name: Build application
+      - name: Build
         run: npm run build
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::590200200492:role/github-landing-deploy
+          aws-region: us-east-1
+
+      - name: Upload to S3
+        run: |
+          aws s3 sync dist/ s3://munchspace-landing --delete
+
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E2LPB1AERO9JMZ \
+            --paths "/*"
