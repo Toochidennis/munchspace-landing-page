@@ -10,9 +10,9 @@ import BecomeAVendorPhone from "./BecomeAVendorPhone";
 
 const phoneScreenImages = [
   "https://media.istockphoto.com/id/1362912892/photo/smiling-truck-driver-man-thumbs-up-satisfied-service-transport.jpg?s=612x612&w=0&k=20&c=C1XL2SDKFXhaH5na-G9wbgSmFU6J8T-L9wwPtJXIGY8=",
-  "https://thumbs.dreamstime.com/b/white-semi-truck-driving-scenic-highway-golden-sunset-dramatic-mountain-landscape-beautiful-transportation-355679596.jpg",
-  "https://media.istockphoto.com/id/1904501572/photo/happy-black-truck-driver-behind-steering-wheel-in-a-cabin-looking-at-camera.webp?b=1&s=612x612&w=0&k=20&c=El22WyINnu6-KVJz06lccBnwrEriI2iCXJRIFHfeb_Y=",
-  "https://media.istockphoto.com/id/157197786/photo/truck-driver-occupations-careers.jpg?s=612x612&w=0&k=20&c=4oC9oE6t2bL9hJq2p0q0b2f0q2b2f0q2b2f0q2b2f0q=", // Supportive driver image for slide 4
+  "https://media.istockphoto.com/id/1362912892/photo/smiling-truck-driver-man-thumbs-up-satisfied-service-transport.jpg?s=612x612&w=0&k=20&c=C1XL2SDKFXhaH5na-G9wbgSmFU6J8T-L9wwPtJXIGY8=",
+  "https://media.istockphoto.com/id/1362912892/photo/smiling-truck-driver-man-thumbs-up-satisfied-service-transport.jpg?s=612x612&w=0&k=20&c=C1XL2SDKFXhaH5na-G9wbgSmFU6J8T-L9wwPtJXIGY8=",
+  "https://media.istockphoto.com/id/1362912892/photo/smiling-truck-driver-man-thumbs-up-satisfied-service-transport.jpg?s=612x612&w=0&k=20&c=C1XL2SDKFXhaH5na-G9wbgSmFU6J8T-L9wwPtJXIGY8=",
 ];
 
 export default function BecomeARiderCarousel() {
