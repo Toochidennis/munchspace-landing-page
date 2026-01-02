@@ -59,7 +59,9 @@ const About = () => {
         <Image
           width={1500}
           height={500}
-          src={"/images/ellipse2.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345307/ellipse2_j1t1ov.png"
+          }
           alt="app store"
           className="absolute right-0 h-15 -mt-20 w-12 hidden md:block"
         />
@@ -67,7 +69,9 @@ const About = () => {
           <div className="px-14 md:px-0 lg:px14">
             <div className="bg-munchprimaryDark min-h-75 max-w-60 mx-auto rounded-b-full relative">
               <Image
-                src={"/images/about/pakage.png"}
+                src={
+                  "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350665/pakage_uvorpe.png"
+                }
                 width={500}
                 height={400}
                 alt="pakage"
@@ -109,7 +113,9 @@ const About = () => {
               height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/about/11.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350665/11_kxwy78.png"
+              }
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Speed with Purpose
@@ -125,7 +131,9 @@ const About = () => {
               height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/about/21.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350666/21_dq8wf4.png"
+              }
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Experience First
@@ -141,7 +149,9 @@ const About = () => {
               height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/about/31.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350666/31_zih2rd.png"
+              }
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Empowerment for All

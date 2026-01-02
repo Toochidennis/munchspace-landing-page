@@ -10,8 +10,10 @@ export default function PromotionBanner() {
       <Image
         width={1500}
         height={500}
-        src={"/images/ellipse1.png"}
-        alt="app store"
+        src={
+          "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767348861/ellipse1_k8h1fs.png"
+        }
+        alt="ellipse"
         className="absolute right-0 h-15 -mt-30 w-12 hidden md:block"
       />
       <section className="hidden md:flex bg-munchorange font-rubik text-white mt-30 relative overflow-hidden mx-3 rounded-4xl md:mx-7 lg:mx-14 justify-end my-20">
@@ -29,7 +31,9 @@ export default function PromotionBanner() {
                 <Image
                   width={1000}
                   height={500}
-                  src={"/images/appstoredownload1.png"}
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345715/appstoredownload1_yh2pkz.png"
+                  }
                   alt="app store"
                   className="w-40 h-15 md:w-27 md:h-10 lg:w-40 lg:h-15"
                 />
@@ -38,8 +42,10 @@ export default function PromotionBanner() {
                 <Image
                   width={1000}
                   height={500}
-                  src={"/images/playstoredownload1.png"}
-                  alt="app store"
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345724/playstoredownload1_eesijh.png"
+                  }
+                  alt="play store"
                   className="w-40 h-15 md:w-27 md:h-10 lg:w-40 lg:h-15"
                 />
               </Link>
@@ -53,9 +59,11 @@ export default function PromotionBanner() {
             </Link>
           </div>
         </div>
-        <div className="basis-3/5">
+        <div className="basis-3/5 h-full">
           <Image
-            src={"/images/promotion3.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349016/promotion3_pf9nq1.png"
+            }
             width={1000}
             height={1000}
             className="h- w-full"
@@ -67,15 +75,19 @@ export default function PromotionBanner() {
         <Image
           width={500}
           height={250}
-          src={"/images/girlphone5.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349072/girlphone5_qyp025.png"
+          }
           alt="app store"
           className="mb-5 -mt-20"
         />
         <Image
           width={500}
           height={250}
-          src={"/images/rectangle.png"}
-          alt="app store"
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349107/rectangle_mjjcdp.png"
+          }
+          alt="divider"
           className="-mt-15"
         />
         <div className="p-5">
@@ -93,7 +105,9 @@ export default function PromotionBanner() {
               <Image
                 width={1000}
                 height={500}
-                src={"/images/appstoredownload1.png"}
+                src={
+                  "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345715/appstoredownload1_yh2pkz.png"
+                }
                 alt="app store"
                 className="w-30"
               />
@@ -102,7 +116,9 @@ export default function PromotionBanner() {
               <Image
                 width={1000}
                 height={500}
-                src={"/images/playstoredownload1.png"}
+                src={
+                  "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345724/playstoredownload1_eesijh.png"
+                }
                 alt="app store"
                 className="w-30"
               />

@@ -39,7 +39,7 @@ const JoinAsARider = () => {
       {/* Subtle decorative circles */}
       <div className="absolute top-10 md:top-40 -left-20 md:left-5 w-40 h-40 bg-[#FBE8D9] rounded-full opacity-50 animate-slide-in"></div>
       <Image
-        src="/images/rider/rider3.png"
+        src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350454/rider3_uoxjjk.png"
         alt="Happy customer enjoying pizza delivery"
         width={450}
         height={500}
@@ -67,7 +67,9 @@ const JoinAsARider = () => {
         </div>
         <div className="basis-2/5 lg:basis-2/4 hidden md:flex justify-end items-end self-end lg:me-4 -mb-10">
           <Image
-            src={"/images/rider/rider1.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350455/rider1_num3us.png"
+            }
             width={900}
             height={800}
             className="block max-w-70 lg:max-w-120"
@@ -88,10 +90,12 @@ const JoinAsARider = () => {
           </p>
           <div className="h-40 w-40 absolute rounded-full bg-[#FFF1C6] -right-25 -top-13 -z-10 hidden md:block"></div>
           <Image
-            src={"/images/join/road.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350283/road_ami9tu.png"
+            }
             width={400}
             height={400}
-            className="block absolute w-30 right-0 mt-10 hidden md:block"
+            className="absolute w-30 right-0 mt-10 hidden md:block"
             alt="chef"
           />
         </div>
@@ -102,7 +106,9 @@ const JoinAsARider = () => {
               height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/join/11.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350283/11_odu7ns.png"
+              }
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Register in minutes
@@ -125,7 +131,9 @@ const JoinAsARider = () => {
               height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/join/21.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350283/21_krm2it.png"
+              }
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Pharmacies Delivery
@@ -148,7 +156,9 @@ const JoinAsARider = () => {
               height={1000}
               alt="order"
               className="mx-auto"
-              src={"/images/join/31.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350284/31_kscm9v.png"
+              }
             />
             <h3 className="font-semibold font-rubik text-center text-2xl mt-7">
               Local Markets Delivery

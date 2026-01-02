@@ -25,7 +25,9 @@ const DeliverEverything = () => {
             height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/deliver-everything/11.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767346390/11_e1pjeh.png"
+            }
           />
           <h3 className="font-semibold font-rubik text-center text-2xl md:text-xl lg:text-2xl mt-7">
             Restaurant & Shops Delivery
@@ -44,7 +46,9 @@ const DeliverEverything = () => {
             height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/deliver-everything/21.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767346274/21_jdqcq0.png"
+            }
           />
           <h3 className="font-semibold font-rubik text-center md:text-xl lg:text-2xl text-2xl mt-7">
             Pharmacies Delivery
@@ -63,7 +67,7 @@ const DeliverEverything = () => {
             height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/deliver-everything/31.png"}
+            src={"https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767346300/31_h0axaj.png"}
           />
           <h3 className="font-semibold font-rubik text-center text-2xl md:text-xl lg:text-2xl mt-7">
             Local Markets Delivery

@@ -24,7 +24,9 @@ const SpeedDelivery = () => {
       <div className="flex items-center justify-center order-3 md:order-2 overflow-hidden md:-mt-14">
         <div>
           <Image
-            src={"/images/fastest-delivery/deliveryguy4.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767347329/deliveryguy4_eokyv4.png"
+            }
             width={1000}
             height={1400}
             alt="delivery guy"
@@ -36,7 +38,9 @@ const SpeedDelivery = () => {
         <div className="space-y-6">
           <div className="flex gap-5 items-center">
             <Image
-              src={"/images/fastest-delivery/AI1.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767347375/AI1_ilj4ok.png"
+              }
               width={200}
               height={200}
               alt="robot"
@@ -53,7 +57,9 @@ const SpeedDelivery = () => {
           </div>
           <div className="flex gap-5 items-center">
             <Image
-              src={"/images/fastest-delivery/bag1.png"}
+              src={
+                "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767347567/bag1_oov5m2.png"
+              }
               width={200}
               height={200}
               alt="robot"

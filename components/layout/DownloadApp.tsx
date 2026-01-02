@@ -8,7 +8,9 @@ const DownloadApp = () => {
       <Image
         width={1500}
         height={500}
-        src={"/images/ellipse2.png"}
+        src={
+          "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345307/ellipse2_j1t1ov.png"
+        }
         alt="app store"
         className="absolute right-0 h-15 -mt-10 w-12 hidden md:block"
       />
@@ -26,7 +28,9 @@ const DownloadApp = () => {
                 <Image
                   width={1000}
                   height={500}
-                  src={"/images/appstoredownload1.png"}
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345715/appstoredownload1_yh2pkz.png"
+                  }
                   alt="app store"
                   className="w-23 lg:w-35"
                 />
@@ -35,8 +39,10 @@ const DownloadApp = () => {
                 <Image
                   width={1000}
                   height={500}
-                  src={"/images/playstoredownload1.png"}
-                  alt="app store"
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345724/playstoredownload1_eesijh.png"
+                  }
+                  alt="play store"
                   className="w-23 lg:w-35"
                 />
               </Link>
@@ -44,7 +50,9 @@ const DownloadApp = () => {
           </div>
         </div>
         <Image
-          src={"/images/downloadapp.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767348722/downloadapp_ltji6p.png"
+          }
           width={2000}
           height={1500}
           className="w-full"
@@ -53,7 +61,9 @@ const DownloadApp = () => {
       </div>
       <div className="md:hidden mx-3">
         <Image
-          src={"/images/iphone131.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345488/iphone131_ga90uf.png"
+          }
           width={1000}
           height={1500}
           alt="iphone 13"
@@ -69,7 +79,9 @@ const DownloadApp = () => {
               <Image
                 width={1000}
                 height={500}
-                src={"/images/appstoredownload1.png"}
+                src={
+                  "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345715/appstoredownload1_yh2pkz.png"
+                }
                 alt="app store"
                 className="w-35"
               />
@@ -78,8 +90,10 @@ const DownloadApp = () => {
               <Image
                 width={1000}
                 height={500}
-                src={"/images/playstoredownload1.png"}
-                alt="app store"
+                src={
+                  "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345724/playstoredownload1_eesijh.png"
+                }
+                alt="play store"
                 className="w-35"
               />
             </Link>

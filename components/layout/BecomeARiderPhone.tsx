@@ -84,7 +84,9 @@ export default function BecomeARiderPhone() {
             {/* Fixed phone mockup */}
             <div className="relative flex">
               <Image
-                src={"/icons/Crown.png"}
+                src={
+                  "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349494/Crown_vtum5h.png"
+                }
                 alt="Crown"
                 width={200}
                 height={200}

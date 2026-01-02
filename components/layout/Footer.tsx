@@ -31,28 +31,36 @@ export default function Footer() {
           <ChevronRight />
         </Button>
         <Image
-          src={"/images/footer/cr.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349266/cr_r80vje.png"
+          }
           width={300}
           height={300}
           alt="chiken republic logo"
           className="w-20 md:w-14 lg:w-20 absolute lg:left-22 md:left-8 top-40 hidden md:block"
         />
         <Image
-          src={"/images/footer/dp.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349272/dp_o1cf3o.png"
+          }
           width={300}
           height={300}
           alt="chiken republic logo"
           className="w-17 md:w-11 lg:w-17 absolute lg:left-53 left-33 top-20 hidden md:block"
         />
         <Image
-          src={"/images/footer/ddp.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349269/ddp_y2llt4.png"
+          }
           width={300}
           height={300}
           alt="chiken republic logo"
           className="w-12 md:w-9 lg:w-12 absolute lg:left-60 left-40 top-60 hidden md:block"
         />
         <Image
-          src={"/images/footer/sr.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349281/sr_icnoij.png"
+          }
           width={300}
           height={300}
           alt="chiken republic logo"
@@ -66,7 +74,9 @@ export default function Footer() {
           className="w-20 md:w-14 lg:w-20 absolute right-20 lg:right-30 top-20 hidden md:block"
         />
         <Image
-          src={"/images/footer/bk.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349281/kfc_o3qdpe.png"
+          }
           width={300}
           height={300}
           alt="chiken republic logo"
@@ -170,7 +180,7 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center">
               <Image
-                src="/images/logo.svg" // Replace with your actual logo path
+                src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349427/logo_vw8d71.svg"
                 alt="MunchSpace Logo"
                 width={250}
                 height={200}
@@ -205,7 +215,9 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
               >
                 <Image
-                  src={"/icons/Instagram1.png"}
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/Instagram1_uieybb.png"
+                  }
                   width={100}
                   height={100}
                   className="h-6 w-6"
@@ -219,7 +231,9 @@ export default function Footer() {
               >
                 {/* 07038479738 */}
                 <Image
-                  src={"/icons/YouTube1.png"}
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/YouTube1_p9aejl.png"
+                  }
                   width={100}
                   height={100}
                   className="h-6 w-6"
@@ -232,7 +246,9 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
               >
                 <Image
-                  src={"/icons/LinkedIn1.png"}
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/LinkedIn1_gixr5t.png"
+                  }
                   width={100}
                   height={100}
                   className="h-6 w-6"
