@@ -10,7 +10,9 @@ const HowWeServe = () => {
           height={100}
           alt="fring eggs"
           className="absolute hidden md:block w-15 lg:w-fit"
-          src={"/images/fryingeggs.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767348034/fryingeggs_b8xwzz.png"
+          }
         />
         <h1 className="font-rubik font-semibold text-4xl lg:text-5xl text-center">
           How we <span className="text-munchprimary">Serve</span> you
@@ -23,7 +25,9 @@ const HowWeServe = () => {
             height={1000}
             alt="order"
             className="mx-auto"
-            src={"/images/serve/order1.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767348077/order1_iyxozv.png"
+            }
           />
           <h3 className="font-semibold font-rubik text-center text-2xl md:text-xl lg:text-2xl mt-7">
             Browse & Order
@@ -41,7 +45,9 @@ const HowWeServe = () => {
             height={500}
             alt="order"
             className="mx-auto"
-            src={"/images/serve/pack1.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767348077/pack1_mf8kwr.png"
+            }
           />
           <h3 className="font-semibold font-rubik text-center text-2xl md:text-xl lg:text-2xl mt-7">
             We Pick & Pack
@@ -57,7 +63,9 @@ const HowWeServe = () => {
             height={500}
             alt="order"
             className="mx-auto"
-            src={"/images/serve/deliver1.png"}
+            src={
+              "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767348077/deliver1_nfqrji.png"
+            }
           />
           <h3 className="font-semibold font-rubik text-center text-2xl mt-7  md:text-xl lg:text-2xl">
             We Deliver to You

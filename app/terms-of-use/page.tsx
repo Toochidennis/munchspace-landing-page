@@ -31,14 +31,18 @@ const TermsOfUse = () => {
       </section>
       <div className="overflow-y-hidden">
         <Image
-          src={"/images/terms-of-use/brush.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767351802/brush_vuufi6.png"
+          }
           width={2000}
           height={200}
           alt="brush seperator"
           className="mb-10 w-screen h-20 md:h-fit hidden md:block -mt-10"
         />
         <Image
-          src={"/images/terms-of-use/brushmobile1.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767351802/brushmobile1_d7wruv.png"
+          }
           width={2000}
           height={200}
           alt="brush seperator"

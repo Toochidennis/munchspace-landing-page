@@ -138,17 +138,17 @@
     @apply bg-background text-foreground;
   }
   .footer_container {
-    background-image: url("/images/footer/greenbg1.png");
+    background-image: url("https://res.cloudinary.com/dj2ybe6v0/image/upload/v1767349276/greenbg1_vfj3d5.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
   #fastest_delivery {
-    background-image: url("/images/fastest-delivery/bg2.png");
+    background-image: url("https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767352357/bg2_sexmic.png");
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
   }
   #everythingvendor{
-    background-image: url("/images/vendor/bg.png");
+    background-image: url("https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350182/bg_cxad7b.png");
   }
 }
 

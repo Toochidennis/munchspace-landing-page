@@ -85,7 +85,9 @@ export default function BecomeARiderCarousel() {
       <Image
         width={1500}
         height={500}
-        src={"/images/ellipse2.png"}
+        src={
+          "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345307/ellipse2_j1t1ov.png"
+        }
         alt="app store"
         className="absolute right-0 h-15 -mt-20 w-12 hidden md:block"
       />
@@ -95,7 +97,9 @@ export default function BecomeARiderCarousel() {
             {/* Fixed phone mockup */}
             <div className="relative flex">
               <Image
-                src={"/icons/Crown.png"}
+                src={
+                  "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349494/Crown_vtum5h.png"
+                }
                 alt="Crown"
                 width={200}
                 height={200}

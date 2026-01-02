@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="/" className="text-3xl font-bold">
             <Image
-              src="/images/logo.svg"
+              src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349427/logo_vw8d71.svg"
               width={300}
               height={300}
               className="w-20"
@@ -114,7 +114,9 @@ export default function Navbar() {
                 <Image
                   width={1000}
                   height={500}
-                  src={"/images/appstoredownload1.png"}
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345715/appstoredownload1_yh2pkz.png"
+                  }
                   alt="app store"
                   className=""
                 />
@@ -123,8 +125,10 @@ export default function Navbar() {
                 <Image
                   width={1000}
                   height={500}
-                  src={"/images/playstoredownload1.png"}
-                  alt="app store"
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345724/playstoredownload1_eesijh.png"
+                  }
+                  alt="play store"
                   className=" "
                 />
               </Link>
