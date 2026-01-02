@@ -29,9 +29,9 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const navLinks = [
-    { label: "Join as a Vendor", href: "/join-as-a-vendor/" },
-    { label: "Join as a Rider", href: "/join-as-a-rider/" },
-    { label: "About MunchSpace", href: "/about/" },
+    { label: "Join as a Vendor", href: "/join-as-a-vendor" },
+    { label: "Join as a Rider", href: "/join-as-a-rider" },
+    { label: "About MunchSpace", href: "/about" },
   ];
 
   return (
