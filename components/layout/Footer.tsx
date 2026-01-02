@@ -178,7 +178,7 @@ export default function Footer() {
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-6 ps-4 md:ps-0">
             {/* Logo */}
-            <div className="flex items-center">
+            <a href="/" className="flex items-center">
               <Image
                 src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349427/logo_vw8d71.svg"
                 alt="MunchSpace Logo"
@@ -186,7 +186,7 @@ export default function Footer() {
                 height={200}
                 className="w-20 md:w-30"
               />
-            </div>
+            </a>
 
             {/* Copyright */}
             <p className="text-gray-400 md:text-left">

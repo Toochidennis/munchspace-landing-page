@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Subtle decorative circles */}
       <div className="absolute top-10 md:top-40 -left-20 md:left-5 w-40 h-40 bg-[#FBE8D9] rounded-full opacity-50 animate-slide-in"></div>
       <Image
-        src="https://res-console.cloudinary.com/dj2ybe6v0/thumbnails/v1/image/upload/v1767345079/Z2VhdGluZ19nbWFmMzU=/drilldown"
+        src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345079/geating_gmaf35.png"
         alt="Happy customer enjoying pizza delivery"
         width={450}
         height={500}
@@ -33,7 +33,7 @@ export default function HeroSection() {
           {/* Testimonial */}
           <div className="flex items-center gap-4 mb-8 max-w-md md:mx-0">
             <Image
-              src="https://res-console.cloudinary.com/dj2ybe6v0/thumbnails/v1/image/upload/v1767345223/dGVzdGltb25pYWxfYmF1NWIx/drilldown"
+              src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345223/testimonial_bau5b1.png"
               alt="Customer testimonial"
               width={100}
               height={100}
@@ -67,7 +67,7 @@ export default function HeroSection() {
           {/* Curved orange line decoration */}
 
           <Image
-            src="https://res-console.cloudinary.com/dj2ybe6v0/thumbnails/v1/image/upload/v1767344659/Z2lybGVhdGluZzFfdXZ0cmRo/drilldown"
+            src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767344659/girleating1_uvtrdh.png"
             alt="Happy customer enjoying pizza delivery"
             width={450}
             height={500}
