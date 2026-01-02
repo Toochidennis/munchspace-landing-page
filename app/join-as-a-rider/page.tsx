@@ -102,10 +102,10 @@ const JoinAsARider = () => {
         <div className="grid md:grid-cols-3 mt-15 gap-15 md:gap-5 lg:gap-30">
           <div className="px-10 md:px-3 lg:px-10">
             <Image
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
               alt="order"
-              className="mx-auto"
+              className="mx-auto w-full"
               src={
                 "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350283/11_odu7ns.png"
               }
@@ -127,10 +127,10 @@ const JoinAsARider = () => {
           </div>
           <div className="px-10 md:px-3 lg:px-10">
             <Image
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
               alt="order"
-              className="mx-auto"
+              className="mx-auto w-full"
               src={
                 "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350283/21_krm2it.png"
               }
@@ -152,10 +152,10 @@ const JoinAsARider = () => {
           </div>
           <div className="px-10 md:px-3 lg:px-10">
             <Image
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
               alt="order"
-              className="mx-auto"
+              className="mx-auto w-full"
               src={
                 "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767350284/31_kscm9v.png"
               }
