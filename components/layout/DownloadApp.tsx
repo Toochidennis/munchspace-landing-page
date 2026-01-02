@@ -64,7 +64,7 @@ const DownloadApp = () => {
             Download our app <br />{" "}
             <span className="whitespace-nowrap">and start ordering.</span>
           </h1>
-          <div className="mt-7 flex gap-2 mb-5">
+          <div className="mt-7 flex gap-2 mb-5 mx-auto justify-center">
             <Link href="/" className="hover:scale-105">
               <Image
                 width={1000}

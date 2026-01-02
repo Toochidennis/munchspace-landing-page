@@ -7,6 +7,29 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about Munchspace: The fastest all-in-one delivery service for hot meals, cold drinks, groceries, and essentials, powered by smart AI for optimal speed and reliability.",
+  keywords: [
+    "about Munchspace",
+    "food delivery company",
+    "AI delivery service",
+    "fast grocery delivery",
+  ],
+  openGraph: {
+    title: "About Munchspace - Fastest Food Delivery & More",
+    description:
+      "Discover our mission to deliver everything you need in minutes with advanced AI routing.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/about",
+  },
+  robots: "index, follow",
+};
 
 const About = () => {
   return (
