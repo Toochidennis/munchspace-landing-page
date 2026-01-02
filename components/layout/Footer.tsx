@@ -202,7 +202,9 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
               >
                 <Image
-                  src={"/icons/X1.png"}
+                  src={
+                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349809/X1_lvz0xt.png"
+                  }
                   width={100}
                   height={100}
                   className="h-6 w-6"
