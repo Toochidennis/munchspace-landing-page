@@ -1,5 +1,22 @@
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Use",
+  description:
+    "Read the Terms of Use for Munchspace, outlining the rules, responsibilities, and conditions for using our fast food and grocery delivery service.",
+  openGraph: {
+    title: "Munchspace Terms of Use",
+    description:
+      "Official terms and conditions for users, vendors, and riders.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/terms-of-use",
+  },
+  robots: "index, follow",
+};
 
 const TermsOfUse = () => {
   return (

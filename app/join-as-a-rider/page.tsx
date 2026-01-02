@@ -7,6 +7,31 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Join as a Rider | Become a Delivery Driver",
+  description:
+    "Earn flexibly as a Munchspace rider. Join our team for fast payouts, smart AI route optimization, and deliveries of meals, groceries, and more in minutes.",
+  keywords: [
+    "join as rider",
+    "delivery driver jobs",
+    "become Munchspace rider",
+    "food delivery driver",
+    "gig economy jobs",
+  ],
+  openGraph: {
+    title:
+      "Join Munchspace as a Rider - Flexible Earnings with AI-Powered Routes",
+    description:
+      "Deliver with Munchspace: Quick, efficient routes and reliable income opportunities.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/join-as-a-rider",
+  },
+  robots: "index, follow",
+};
 
 const JoinAsARider = () => {
   return (

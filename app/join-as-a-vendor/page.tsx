@@ -8,6 +8,30 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Join as a Vendor | Partner with Munchspace",
+  description:
+    "Grow your restaurant or store with Munchspace. Join as a vendor to reach more customers with our lightning-fast AI-optimized delivery service. Easy onboarding and increased orders.",
+  keywords: [
+    "join as vendor",
+    "restaurant partner",
+    "food delivery partner",
+    "become Munchspace vendor",
+    "partner with Munchspace",
+  ],
+  openGraph: {
+    title: "Become a Munchspace Vendor - Boost Your Sales with Fast Delivery",
+    description:
+      "Partner with Munchspace for seamless integrations and rapid deliveries powered by smart AI routing.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/join-as-a-vendor",
+  },
+  robots: "index, follow",
+};
 
 const JoinAsAVendor = () => {
   return (
