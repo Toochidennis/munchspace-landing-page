@@ -56,21 +56,22 @@ const JoinAsAVendor = () => {
             increase your sales, and build a brand that stands out.
           </p>
           <div className="flex gap-5 mt-7">
-            <Button
-              // href={"join-prime-network"}
-              className="text-white bg-munchorange text-center border-munchorange rounded-xl border"
-              style={{ paddingTop: "20px", paddingBottom: "20px" }}
+            <Link
+              href={"https://vendor.munchspace.io/register"}
+              className="text-white bg-munchorange text-center gap-2 border-munchorange flex rounded-xl items-center px-2 border"
             >
               <span>Join as a vendor</span>
-              <ArrowRight />
-            </Button>
-            <Button
-              variant={"outline"}
-              className="border-munchorange text-center text-munchorange rounded-xl"
-              style={{ paddingTop: "20px", paddingBottom: "20px" }}
-            >
-              Login
-            </Button>
+              <ArrowRight size={17} />
+            </Link>
+            <Link href={"https://vendor.munchspace.io/login"}>
+              <Button
+                variant={"outline"}
+                className="border-munchorange text-center text-munchorange hover:text-munchprimary cursor-pointer rounded-xl"
+                style={{ paddingTop: "20px", paddingBottom: "20px" }}
+              >
+                Login
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="basis-2/5 lg:basis-2/4 hidden md:flex justify-end items-end self-end -mb-10">
@@ -126,7 +127,7 @@ const JoinAsAVendor = () => {
               details.
             </p>
             <Link
-              href={"/"}
+              href={"https://vendor.munchspace.io/register"}
               className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg md:text-base lg:text-lg"
             >
               Register Now
@@ -151,7 +152,7 @@ const JoinAsAVendor = () => {
               delivery.
             </p>
             <Link
-              href={"/"}
+              href={"https://vendor.munchspace.io/register"}
               className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg md:text-base lg:text-lg"
             >
               Register Now
@@ -175,7 +176,7 @@ const JoinAsAVendor = () => {
               Go online, accept nearby orders, and earn more with every trip.
             </p>
             <Link
-              href={"/"}
+              href={"https://vendor.munchspace.io/register"}
               className="text-munchgreen font-medium font-rubik flex gap-1 items-center justify-center mt-2 text-lg md:text-base lg:text-lg"
             >
               Register Now
