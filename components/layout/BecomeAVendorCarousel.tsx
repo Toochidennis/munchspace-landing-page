@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import BecomeARiderPhone from "./BecomeARiderPhone";
 import BecomeAVendorPhone from "./BecomeAVendorPhone";
+import Link from "next/link";
 
 const phoneScreenImages = [
   "https://media.istockphoto.com/id/1362912892/photo/smiling-truck-driver-man-thumbs-up-satisfied-service-transport.jpg?s=612x612&w=0&k=20&c=C1XL2SDKFXhaH5na-G9wbgSmFU6J8T-L9wwPtJXIGY8=",
@@ -75,7 +76,7 @@ export default function BecomeAVendorCarousel() {
       phoneEmblaApi?.scrollTo(index);
       textEmblaApi?.scrollTo(index);
     },
-    [phoneEmblaApi, textEmblaApi]
+    [phoneEmblaApi, textEmblaApi],
   );
 
   const slideCount = phoneScreenImages.length;
@@ -144,10 +145,12 @@ export default function BecomeAVendorCarousel() {
                       <br className="hidden md:inline lg:hidden" /> thrive, on
                       and off the road.
                     </p>
-                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      join as a Vendor
-                      <ArrowRight className="w-5 h-5 mt-1" />
-                    </button>
+                    <Link href={"https://vendor.munchspace.io/register"}>
+                      <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:text-munchprimary cursor-pointer transition flex items-center gap-2">
+                        join as a Vendor
+                        <ArrowRight className="w-5 h-5 mt-1" />
+                      </button>
+                    </Link>
                   </div>
 
                   {/* Slide 2 */}
@@ -164,10 +167,12 @@ export default function BecomeAVendorCarousel() {
                       <br className="md:hidden lg:inline" />
                       of your career and earnings.
                     </p>
-                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      join as a Vendor
-                      <ArrowRight className="w-5 h-5 mt-1" />
-                    </button>
+                    <Link href={"https://vendor.munchspace.io/register"}>
+                      <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:text-munchprimary cursor-pointer transition flex items-center gap-2">
+                        join as a Vendor
+                        <ArrowRight className="w-5 h-5 mt-1" />
+                      </button>
+                    </Link>
                   </div>
 
                   {/* Slide 3 */}
@@ -182,10 +187,12 @@ export default function BecomeAVendorCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      join as a Vendor
-                      <ArrowRight className="w-5 h-5 mt-1" />
-                    </button>
+                    <Link href={"https://vendor.munchspace.io/register"}>
+                      <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:text-munchprimary cursor-pointer transition flex items-center gap-2">
+                        join as a Vendor
+                        <ArrowRight className="w-5 h-5 mt-1" />
+                      </button>
+                    </Link>
                   </div>
 
                   {/* Slide 4 - Newly added */}
@@ -200,10 +207,12 @@ export default function BecomeAVendorCarousel() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      join as a Vendor
-                      <ChevronRight className="w-5 h-5 mt-1" />
-                    </button>
+                    <Link href={"https://vendor.munchspace.io/register"}>
+                      <button className="text-white bg-munchorange px-5 lg:px-8 py-2.5 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:text-munchprimary cursor-pointer transition flex items-center gap-2">
+                        join as a Vendor
+                        <ChevronRight className="w-5 h-5 mt-1" />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

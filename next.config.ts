@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "media.gettyimages.com" },
+      { protocol: "https", hostname: "res.cloudinary.com" },
       { protocol: "https", hostname: "media.istockphoto.com" },
       { protocol: "https", hostname: "thumbs.dreamstime.com" },
       { protocol: "https", hostname: "static.vecteezy.com" },

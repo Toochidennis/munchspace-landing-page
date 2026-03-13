@@ -190,7 +190,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <p className="text-gray-400 md:text-left">
-              © 2025 <span className="text-munchprimary">MunchSpace</span> | All
+              © 2026 <span className="text-munchprimary">MunchSpace</span> | All
               Rights Reserved
             </p>
 
