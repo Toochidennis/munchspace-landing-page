@@ -233,7 +233,7 @@ export default function BecomeARiderCarousel() {
         </div>
       </section>
       <div className="md:hidden">
-        <BecomeAVendorPhone />
+        <BecomeARiderPhone />
       </div>
     </div>
   );

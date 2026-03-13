@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const phoneScreenImages = [
   "https://media.istockphoto.com/id/1362912892/photo/smiling-truck-driver-man-thumbs-up-satisfied-service-transport.jpg?s=612x612&w=0&k=20&c=C1XL2SDKFXhaH5na-G9wbgSmFU6J8T-L9wwPtJXIGY8=",
@@ -71,7 +72,7 @@ export default function BecomeAVendorPhone() {
       phoneEmblaApi?.scrollTo(index);
       textEmblaApi?.scrollTo(index);
     },
-    [phoneEmblaApi, textEmblaApi]
+    [phoneEmblaApi, textEmblaApi],
   );
 
   const slideCount = phoneScreenImages.length;
@@ -135,9 +136,12 @@ export default function BecomeAVendorPhone() {
                       opportunities designed to help you thrive, on and off the
                       road.
                     </p>
-                    <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
-                    </button>
+                    <Link href={"https://vendor.munchspace.io/register"}>
+                      {" "}
+                      <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:text-black transition flex items-center gap-2">
+                        Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
+                      </button>
+                    </Link>
                   </div>
 
                   {/* Slide 2 */}
@@ -153,9 +157,11 @@ export default function BecomeAVendorPhone() {
                       <br />
                       of your career and earnings.
                     </p>
-                    <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
-                    </button>
+                    <Link href={"https://vendor.munchspace.io/register"}>
+                      <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:text-black transition flex items-center gap-2">
+                        Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
+                      </button>
+                    </Link>
                   </div>
 
                   {/* Slide 3 */}
@@ -170,9 +176,11 @@ export default function BecomeAVendorPhone() {
                       <br />
                       financial tools, and support every mile of the way.
                     </p>
-                    <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition flex items-center gap-2">
-                      Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
-                    </button>
+                    <Link href={"https://vendor.munchspace.io/register"}>
+                      <button className="bg-munchorange text-white px-5 md:px-8 py-2.5 md:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:text-black transition flex items-center gap-2">
+                        Become a Vendor <ArrowRight className="w-5 h-5 mt-1" />
+                      </button>
+                    </Link>
                   </div>
 
                   {/* Slide 4 - Newly added */}

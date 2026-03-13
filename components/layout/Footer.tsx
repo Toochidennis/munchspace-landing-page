@@ -67,7 +67,9 @@ export default function Footer() {
           className="w-15 md:w-9 lg:w-15 absolute right-40 lg:right-60 top-40 lg:top-30 hidden md:block"
         />
         <Image
-          src={"/images/footer/kfc.png"}
+          src={
+            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349265/bk_eytntz.png"
+          }
           width={300}
           height={300}
           alt="chiken republic logo"
@@ -123,7 +125,7 @@ export default function Footer() {
                         {city}
                       </Link>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>
@@ -142,7 +144,7 @@ export default function Footer() {
                         {item}
                       </Link>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>
