@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { getAppLinks } from "@/lib/api";
 
-const DownloadApp = () => {
+const DownloadApp = async () => {
+  const { appStore, playStore } = await getAppLinks();
+
   return (
-    <div>
+    /* The navbar's "Download the app" scrolls here when it cannot tell which
+       store a visitor needs. */
+    <div id="download" className="scroll-mt-24">
       <Image
         width={1500}
         height={500}
@@ -24,7 +29,12 @@ const DownloadApp = () => {
               Download our app <br /> and start ordering.
             </h1>
             <div className="mt-3 lg:mt-7 flex gap-5">
-              <Link href="/" className="hover:scale-105">
+              <Link
+                href={appStore ?? "#download"}
+                target={appStore ? "_blank" : undefined}
+                rel={appStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
                 <Image
                   width={1000}
                   height={500}
@@ -35,7 +45,12 @@ const DownloadApp = () => {
                   className="w-23 lg:w-35"
                 />
               </Link>
-              <Link href="/" className="hover:scale-105">
+              <Link
+                href={playStore ?? "#download"}
+                target={playStore ? "_blank" : undefined}
+                rel={playStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
                 <Image
                   width={1000}
                   height={500}
@@ -75,7 +90,12 @@ const DownloadApp = () => {
             <span className="whitespace-nowrap">and start ordering.</span>
           </h1>
           <div className="mt-7 flex gap-2 mb-5 mx-auto justify-center">
-            <Link href="/" className="hover:scale-105">
+            <Link
+                href={appStore ?? "#download"}
+                target={appStore ? "_blank" : undefined}
+                rel={appStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
               <Image
                 width={1000}
                 height={500}
@@ -86,7 +106,12 @@ const DownloadApp = () => {
                 className="w-35"
               />
             </Link>
-            <Link href="/" className="hover:scale-105">
+            <Link
+                href={playStore ?? "#download"}
+                target={playStore ? "_blank" : undefined}
+                rel={playStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
               <Image
                 width={1000}
                 height={500}

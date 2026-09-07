@@ -1,10 +1,11 @@
-"use client";
-
 import { Info } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAppLinks } from "@/lib/api";
 
-export default function PromotionBanner() {
+export default async function PromotionBanner() {
+  const { appStore, playStore } = await getAppLinks();
+
   return (
     <div className="relative">
       <Image
@@ -27,7 +28,12 @@ export default function PromotionBanner() {
             </h1>
             <h1>Download our app now.</h1>
             <div className="mt-7 flex gap-5">
-              <Link href="/" className="hover:scale-105">
+              <Link
+                href={appStore ?? "/#download"}
+                target={appStore ? "_blank" : undefined}
+                rel={appStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
                 <Image
                   width={1000}
                   height={500}
@@ -38,7 +44,12 @@ export default function PromotionBanner() {
                   className="w-40 h-15 md:w-27 md:h-10 lg:w-40 lg:h-15"
                 />
               </Link>
-              <Link href="/" className="hover:scale-105">
+              <Link
+                href={playStore ?? "/#download"}
+                target={playStore ? "_blank" : undefined}
+                rel={playStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
                 <Image
                   width={1000}
                   height={500}
@@ -101,7 +112,12 @@ export default function PromotionBanner() {
             Download our app now.
           </h1>
           <div className="mt-7 flex gap-5">
-            <Link href="/" className="hover:scale-105">
+            <Link
+                href={appStore ?? "/#download"}
+                target={appStore ? "_blank" : undefined}
+                rel={appStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
               <Image
                 width={1000}
                 height={500}
@@ -112,7 +128,12 @@ export default function PromotionBanner() {
                 className="w-30"
               />
             </Link>
-            <Link href="/" className="hover:scale-105">
+            <Link
+                href={playStore ?? "/#download"}
+                target={playStore ? "_blank" : undefined}
+                rel={playStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
               <Image
                 width={1000}
                 height={500}

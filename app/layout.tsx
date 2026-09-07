@@ -3,6 +3,7 @@ import { Inter, Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { getAppLinks } from "@/lib/api";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -58,17 +59,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const appLinks = await getAppLinks();
+
   return (
     <html lang="en">
       <body
         className={`${rubik.variable} ${inter.variable} antialiased bg-gray-100 overflow-x-hidden w-full max-w-450 mx-auto`}
       >
-        <Navbar />
+        <Navbar appLinks={appLinks} />
         {children}
         <Footer />
       </body>
