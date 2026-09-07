@@ -1,19 +1,68 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ChevronRight,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Youtube,
-} from "lucide-react";
+import { ChevronRight, Facebook, Music2 } from "lucide-react";
 import { Button } from "../ui/button";
-import { link } from "fs";
+import {
+  channelValues,
+  getContactDetails,
+  getServiceLocations,
+  type ContactChannel,
+} from "@/lib/api";
 
-export default function Footer() {
+/**
+ * The socials the footer can render, in the order they appear. A channel the
+ * admin has not published is simply absent — the row is built from what comes
+ * back, not from this list.
+ *
+ * Four have artwork already; Facebook and TikTok fall back to a line icon at
+ * the same size until artwork exists for them.
+ */
+const SOCIAL_CHANNELS: Array<{
+  type: ContactChannel;
+  label: string;
+  image?: string;
+  Icon?: typeof Facebook;
+}> = [
+  {
+    type: "twitter",
+    label: "X",
+    image:
+      "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349809/X1_lvz0xt.png",
+  },
+  {
+    type: "instagram",
+    label: "Instagram",
+    image:
+      "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/Instagram1_uieybb.png",
+  },
+  {
+    type: "youtube",
+    label: "YouTube",
+    image:
+      "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/YouTube1_p9aejl.png",
+  },
+  {
+    type: "linkedin",
+    label: "LinkedIn",
+    image:
+      "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/LinkedIn1_gixr5t.png",
+  },
+  { type: "facebook", label: "Facebook", Icon: Facebook },
+  { type: "tiktok", label: "TikTok", Icon: Music2 },
+];
+
+export default async function Footer() {
+  const [contactDetails, locations] = await Promise.all([
+    getContactDetails(),
+    getServiceLocations(),
+  ]);
+  const phones = channelValues(contactDetails, "phone");
+  const emails = channelValues(contactDetails, "email");
+  const socials = SOCIAL_CHANNELS.flatMap((channel) => {
+    const detail = channelValues(contactDetails, channel.type)[0];
+    return detail ? [{ ...channel, href: detail.value }] : [];
+  });
+
   return (
     <div className="footer_container">
       <div className="h-100 md:h-75 lh:h-100 pt-17 md:pt-5 lg:mt-15 relative flex flex-col gap-3 font-rubik justify-center items-center text-center font-bold text-3xl md:text-3xl lg:text-5xl text-white">
@@ -96,6 +145,7 @@ export default function Footer() {
                   { name: "Join as a Vendor", link: "/join-as-a-vendor" },
                   { name: "Join as a Rider", link: "/join-as-a-rider" },
                   { name: "About MunchSpace", link: "/about" },
+                  { name: "Contact Us", link: "/contact" },
                 ].map((item) => (
                   <li key={item.name}>
                     <Link
@@ -113,18 +163,13 @@ export default function Footer() {
             <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6">Locations</h3>
               <ul className="space-y-4 md:text-sm lg:text-base">
-                {["Enugu", "Abuja", "Lagos", "Jos", "Kano", "Warri"].map(
-                  (city) => (
-                    <li key={city}>
-                      <Link
-                        href="#"
-                        className="hover:text-munchorange hover:translate-x-1 transition-all duration-300"
-                      >
-                        {city}
-                      </Link>
-                    </li>
-                  )
-                )}
+                {locations.map((location) => (
+                  <li key={location.id}>
+                    <span className="hover:text-munchorange transition-all duration-300">
+                      {location.name}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -132,18 +177,21 @@ export default function Footer() {
             <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6 ">Legals</h3>
               <ul className="space-y-4 md:text-sm lg:text-base">
-                {["Terms of Use", "Privacy Policy", "Compliance"].map(
-                  (item) => (
-                    <li key={item}>
-                      <Link
-                        href="/terms-of-use"
-                        className="hover:text-munchorange hover:translate-x-1 transition-all duration-300"
-                      >
-                        {item}
-                      </Link>
-                    </li>
-                  )
-                )}
+                {[
+                  { name: "Terms of Use", link: "/terms-of-use" },
+                  { name: "Privacy Policy", link: "/privacy-policy" },
+                  { name: "Refund Policy", link: "/refund-policy" },
+                  { name: "Compliance", link: "/compliance" },
+                ].map((item) => (
+                  <li key={item.link}>
+                    <Link
+                      href={item.link}
+                      className="hover:text-munchorange hover:translate-x-1 transition-all duration-300"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -151,23 +199,37 @@ export default function Footer() {
             <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6">Customer Service</h3>
               <div className="space-y-6 text-gray-400 md:text-sm lg:text-base">
-                <div>
-                  <p className="mb-1">Service Hours</p>
-                  <p className="text-white">Monday - Saturday 8:30AM to 8PM</p>
-                </div>
-                <div>
-                  <p className="mb-1">Phone</p>
-                  <p className="text-white">(08012378000) (0808524000)</p>
-                </div>
-                <div>
-                  <p className="mb-1">Email</p>
-                  <a
-                    href="mailto:support@munchspace.com"
-                    className="underline text-white hover:text-munchorange transition-colors"
-                  >
-                    support@munchspace.com
-                  </a>
-                </div>
+                {phones.length > 0 && (
+                  <div>
+                    <p className="mb-1">Phone</p>
+                    {phones.map((phone) => (
+                      <a
+                        key={phone.value}
+                        href={`tel:${phone.value.replace(/\s+/g, "")}`}
+                        className="block text-white hover:text-munchorange transition-colors"
+                      >
+                        {phone.value}
+                        {phone.label ? (
+                          <span className="text-gray-400"> · {phone.label}</span>
+                        ) : null}
+                      </a>
+                    ))}
+                  </div>
+                )}
+                {emails.length > 0 && (
+                  <div>
+                    <p className="mb-1">Email</p>
+                    {emails.map((email) => (
+                      <a
+                        key={email.value}
+                        href={`mailto:${email.value}`}
+                        className="block underline text-white hover:text-munchorange transition-colors"
+                      >
+                        {email.value}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -195,69 +257,32 @@ export default function Footer() {
             </p>
 
             {/* Social Icons */}
-            <div className="flex space-x-6">
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
-              >
-                <Image
-                  src={
-                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349809/X1_lvz0xt.png"
-                  }
-                  width={100}
-                  height={100}
-                  className="h-6 w-6"
-                  alt="x logo"
-                />
-              </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
-              >
-                <Image
-                  src={
-                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/Instagram1_uieybb.png"
-                  }
-                  width={100}
-                  height={100}
-                  className="h-6 w-6"
-                  alt="IG logo"
-                />
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
-              >
-                {/* 07038479738 */}
-                <Image
-                  src={
-                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/YouTube1_p9aejl.png"
-                  }
-                  width={100}
-                  height={100}
-                  className="h-6 w-6"
-                  alt="YT logo"
-                />
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
-              >
-                <Image
-                  src={
-                    "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349808/LinkedIn1_gixr5t.png"
-                  }
-                  width={100}
-                  height={100}
-                  className="h-6 w-6"
-                  alt="LI logo"
-                />
-              </a>
-            </div>
+            {socials.length > 0 && (
+              <div className="flex space-x-6">
+                {socials.map((social) => (
+                  <a
+                    key={social.type}
+                    href={social.href}
+                    aria-label={social.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white hover:scale-110 transition-transform duration-300"
+                  >
+                    {social.image ? (
+                      <Image
+                        src={social.image}
+                        width={100}
+                        height={100}
+                        className="h-6 w-6"
+                        alt={`${social.label} logo`}
+                      />
+                    ) : social.Icon ? (
+                      <social.Icon className="h-6 w-6" />
+                    ) : null}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </footer>
