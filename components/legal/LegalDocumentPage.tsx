@@ -68,7 +68,28 @@ export default async function LegalDocumentPage({
            * while writing, so what was composed is what publishes.
            */
           <div
-            className="[&_p]:mb-3 [&_h1]:font-rubik [&_h1]:font-bold [&_h1]:text-xl [&_h1]:mb-1 [&_h1]:mt-4 [&_h2]:font-rubik [&_h2]:font-bold [&_h2]:text-lg [&_h2]:mb-1 [&_h2]:mt-4 [&_h3]:font-rubik [&_h3]:font-bold [&_h3]:text-base [&_h3]:mb-1 [&_h3]:mt-3 [&_ul]:list-disc [&_ul]:ms-6 [&_ul]:md:ms-8 [&_ul]:my-2 [&_ol]:list-decimal [&_ol]:ms-6 [&_ol]:md:ms-8 [&_ol]:my-2 [&_li]:pl-1 [&_a]:underline [&_a]:text-munchprimary [&_blockquote]:border-l-4 [&_blockquote]:border-slate-300 [&_blockquote]:ps-4 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:my-4 [&_pre]:bg-slate-100 [&_pre]:p-4 [&_pre]:rounded [&_pre]:my-4 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:overflow-x-auto"
+            className={[
+              "[&_p]:mb-3",
+              "[&_h1]:font-rubik [&_h1]:font-bold [&_h1]:text-xl [&_h1]:mb-1 [&_h1]:mt-4",
+              "[&_h2]:font-rubik [&_h2]:font-bold [&_h2]:text-lg [&_h2]:mb-1 [&_h2]:mt-4",
+              "[&_h3]:font-rubik [&_h3]:font-bold [&_h3]:text-base [&_h3]:mb-1 [&_h3]:mt-3",
+              "[&_ul]:list-disc [&_ul]:ms-6 [&_ul]:md:ms-8 [&_ul]:my-2",
+              "[&_ol]:list-decimal [&_ol]:ms-6 [&_ol]:md:ms-8 [&_ol]:my-2",
+              "[&_li]:pl-1",
+              "[&_a]:underline [&_a]:text-munchprimary",
+              "[&_blockquote]:border-l-4 [&_blockquote]:border-slate-300 [&_blockquote]:ps-4 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:my-4",
+              "[&_pre]:bg-slate-100 [&_pre]:p-4 [&_pre]:rounded [&_pre]:my-4 [&_pre]:font-mono [&_pre]:text-sm [&_pre]:overflow-x-auto",
+              // Tables had no styling at all, so a policy written with them
+              // published as unbordered, unpadded runs of text. The wrapper is
+              // what keeps a wide table from pushing the page sideways on a
+              // phone — the table scrolls inside it instead.
+              "[&_hr]:my-8 [&_hr]:border-slate-200",
+              "[&_table]:w-full [&_table]:my-4 [&_table]:border-collapse [&_table]:text-left [&_table]:block [&_table]:overflow-x-auto",
+              "[&_thead]:bg-slate-50",
+              "[&_th]:border [&_th]:border-slate-200 [&_th]:px-3 [&_th]:py-2 [&_th]:font-rubik [&_th]:font-bold [&_th]:align-top",
+              "[&_td]:border [&_td]:border-slate-200 [&_td]:px-3 [&_td]:py-2 [&_td]:align-top",
+              "[&_code]:bg-slate-100 [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded [&_code]:font-mono [&_code]:text-xs",
+            ].join(" ")}
             dangerouslySetInnerHTML={{ __html: document.content }}
           />
         ) : (
