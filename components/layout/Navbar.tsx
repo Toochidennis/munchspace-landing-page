@@ -6,8 +6,41 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import type { AppLinks } from "@/lib/api";
 
-export default function Navbar() {
+export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
+  /**
+   * "Download the app" is ambiguous with two apps, and a phone already knows
+   * which one it needs.
+   *
+   * Decided on click rather than in an effect: the markup renders the same on
+   * the server and the client, it still works with JavaScript disabled, and
+   * there is no flash of the wrong destination. When the platform is unknown —
+   * a desktop, or a store that has not been published — it falls through to the
+   * section showing both, which is the only honest answer when we cannot tell.
+   */
+  const handleDownloadClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+  ) => {
+    const ua = navigator.userAgent;
+    // Modern iPads report as Macs, distinguishable only by touch support.
+    const isApple =
+      /iPad|iPhone|iPod/.test(ua) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+
+    const store = isApple
+      ? appLinks.appStore
+      : isAndroid
+        ? appLinks.playStore
+        : null;
+
+    if (store) {
+      event.preventDefault();
+      window.open(store, "_blank", "noopener,noreferrer");
+    }
+  };
+
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -32,6 +65,7 @@ export default function Navbar() {
     { label: "Join as a Vendor", href: "/join-as-a-vendor" },
     { label: "Join as a Rider", href: "/join-as-a-rider" },
     { label: "About MunchSpace", href: "/about" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -66,11 +100,11 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-          <a href={"/"}>
+          <Link href="/#download" onClick={handleDownloadClick}>
             <Button className="bg-munchorange hidden md:block h-11 hover:bg-munchprimaryDark rounded-full px-6 cursor-pointer">
               Download the app
             </Button>
-          </a>
+          </Link>
 
           {/* Mobile Menu Trigger */}
           <div className="md:hidden">
@@ -110,7 +144,12 @@ export default function Navbar() {
               </div>
             ))}
             <div className="mt-10 flex gap-5">
-              <Link href="/" className="hover:scale-105">
+              <Link
+                href={appLinks.appStore ?? "/#download"}
+                target={appLinks.appStore ? "_blank" : undefined}
+                rel={appLinks.appStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
                 <Image
                   width={1000}
                   height={500}
@@ -121,7 +160,12 @@ export default function Navbar() {
                   className=""
                 />
               </Link>
-              <Link href="/" className="hover:scale-105">
+              <Link
+                href={appLinks.playStore ?? "/#download"}
+                target={appLinks.playStore ? "_blank" : undefined}
+                rel={appLinks.playStore ? "noopener noreferrer" : undefined}
+                className="hover:scale-105"
+              >
                 <Image
                   width={1000}
                   height={500}
