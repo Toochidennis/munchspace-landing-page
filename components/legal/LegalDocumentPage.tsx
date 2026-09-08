@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getLegalDocument, type LegalDocumentType } from "@/lib/api";
+import { normalizeLegalHtml } from "@/lib/legal-html";
 
 /**
  * Every legal page is this page. The heading and the document type change; the
@@ -66,6 +67,10 @@ export default async function LegalDocumentPage({
            * holding settings.legal.manage — a trusted author, not visitor
            * input. The selectors below mirror the styles that editor shows
            * while writing, so what was composed is what publishes.
+           *
+           * normalizeLegalHtml recovers documents an older editor stored
+           * escaped, and drops any class or style attribute the author's
+           * clipboard carried in, so the styling below is the only styling.
            */
           <div
             className={[
@@ -90,7 +95,7 @@ export default async function LegalDocumentPage({
               "[&_td]:border [&_td]:border-slate-200 [&_td]:px-3 [&_td]:py-2 [&_td]:align-top",
               "[&_code]:bg-slate-100 [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded [&_code]:font-mono [&_code]:text-xs",
             ].join(" ")}
-            dangerouslySetInnerHTML={{ __html: document.content }}
+            dangerouslySetInnerHTML={{ __html: normalizeLegalHtml(document.content) }}
           />
         ) : (
           <p className="text-gray-600">
