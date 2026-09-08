@@ -284,21 +284,47 @@ export type ServiceCountry = {
  * can never advertise somewhere delivery cannot be priced — a country is listed
  * only because at least one of its states is.
  */
-export async function getServiceLocations(): Promise<ServiceCountry[]> {
+export type ServiceCoverage = {
+  countries: ServiceCountry[];
+  totalCountries: number;
+  totalStates: number;
+};
+
+export async function getServiceLocations(): Promise<ServiceCoverage> {
   const result = await apiGet<{
     data: ServiceCountry[];
     totalCountries: number;
     totalStates: number;
   }>("/locations");
 
-  if (!result.ok || !Array.isArray(result.data?.data)) return [];
+  if (!result.ok || !Array.isArray(result.data?.data)) {
+    return { countries: [], totalCountries: 0, totalStates: 0 };
+  }
 
-  // An API that has not been deployed yet still returns a flat list of states.
-  // Normalise it rather than letting the page fail through the changeover.
-  return result.data.data.map((entry) => ({
-    ...entry,
-    states: Array.isArray(entry.states) ? entry.states : [],
-  }));
+  const entries = result.data.data;
+
+  // An API that has not been deployed yet returns a flat list of states rather
+  // than countries. Reading those as countries would put "Lagos" on screen as a
+  // country, so group them under one unnamed heading instead — they are still
+  // states, we just do not know the country until the API says so.
+  const isGrouped = entries.some((entry) => Array.isArray(entry.states));
+
+  const countries: ServiceCountry[] = isGrouped
+    ? entries.map((entry) => ({
+        ...entry,
+        states: Array.isArray(entry.states) ? entry.states : [],
+      }))
+    : entries.length
+      ? [{ id: "unknown", name: "", code: "", states: entries }]
+      : [];
+
+  return {
+    countries,
+    // Counted from the payload rather than the totals field, so both shapes
+    // report the same thing.
+    totalCountries: countries.filter((c) => c.name).length,
+    totalStates: countries.reduce((sum, c) => sum + c.states.length, 0),
+  };
 }
 
 // ---------------------------------------------------------------------------

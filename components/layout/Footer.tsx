@@ -52,10 +52,23 @@ const SOCIAL_CHANNELS: Array<{
 ];
 
 export default async function Footer() {
-  const [contactDetails, locations] = await Promise.all([
+  const [contactDetails, coverage] = await Promise.all([
     getContactDetails(),
     getServiceLocations(),
   ]);
+
+  // Says something true about reach without naming anywhere. A partial list of
+  // states read as the whole list, so someone served but unlisted would have
+  // concluded we do not deliver to them — the page carries the names instead.
+  const coverageSummary =
+    coverage.totalStates > 0
+      ? `${coverage.totalStates} ${coverage.totalStates === 1 ? "state" : "states"}` +
+        (coverage.totalCountries > 1
+          ? ` across ${coverage.totalCountries} countries`
+          : coverage.countries[0]?.name
+            ? ` in ${coverage.countries[0].name}`
+            : "")
+      : null;
   const phones = channelValues(contactDetails, "phone");
   const emails = channelValues(contactDetails, "email");
   const socials = SOCIAL_CHANNELS.flatMap((channel) => {
@@ -135,7 +148,7 @@ export default async function Footer() {
       <footer className="bg-black text-white py-12 md:py-10 mx-5 md:mx-7 lg:mx-14 rounded-t-2xl">
         <div className="mx-auto md:px-3 lg:px-12">
           {/* Main Footer Grid */}
-          <div className="grid px-4 md:px-0 md:grid-cols-4 gap-8 md:gap-1 lg:gap-12 mb-12">
+          <div className="grid px-4 md:px-0 md:grid-cols-3 gap-8 md:gap-1 lg:gap-12 mb-12">
             {/* Links of Interest */}
             <div>
               <h3 className="text-lg font-semibold mb-6">Links of Interest</h3>
@@ -144,6 +157,7 @@ export default async function Footer() {
                   { name: "Homepage", link: "/" },
                   { name: "Join as a Vendor", link: "/join-as-a-vendor" },
                   { name: "Join as a Rider", link: "/join-as-a-rider" },
+                  { name: "Where we deliver", link: "/where-we-deliver" },
                   { name: "About MunchSpace", link: "/about" },
                   { name: "Contact Us", link: "/contact" },
                 ].map((item) => (
@@ -154,39 +168,11 @@ export default async function Footer() {
                     >
                       {item.name}
                     </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Locations */}
-            <div className="mt-3 md:mt-0">
-              <h3 className="text-lg font-semibold mb-6">Locations</h3>
-              <ul className="space-y-4 md:text-sm lg:text-base">
-                {/* Grouped by country. With one country the heading would
-                    just repeat itself, so it only appears once there are two —
-                    the states stay listed either way, because naming the
-                    country alone would claim the whole of it. */}
-                {locations.map((country) => (
-                  <li key={country.id}>
-                    {locations.length > 1 && (
-                      <span className="block font-semibold mb-2">
-                        {country.name}
+                    {item.link === "/where-we-deliver" && coverageSummary && (
+                      <span className="block text-gray-400 text-xs mt-1">
+                        {coverageSummary}
                       </span>
                     )}
-                    <ul
-                      className={
-                        locations.length > 1 ? "space-y-2 ps-3" : "space-y-4"
-                      }
-                    >
-                      {country.states.map((state) => (
-                        <li key={state.id}>
-                          <span className="hover:text-munchorange transition-all duration-300">
-                            {state.name}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
                   </li>
                 ))}
               </ul>
