@@ -163,11 +163,30 @@ export default async function Footer() {
             <div className="mt-3 md:mt-0">
               <h3 className="text-lg font-semibold mb-6">Locations</h3>
               <ul className="space-y-4 md:text-sm lg:text-base">
-                {locations.map((location) => (
-                  <li key={location.id}>
-                    <span className="hover:text-munchorange transition-all duration-300">
-                      {location.name}
-                    </span>
+                {/* Grouped by country. With one country the heading would
+                    just repeat itself, so it only appears once there are two —
+                    the states stay listed either way, because naming the
+                    country alone would claim the whole of it. */}
+                {locations.map((country) => (
+                  <li key={country.id}>
+                    {locations.length > 1 && (
+                      <span className="block font-semibold mb-2">
+                        {country.name}
+                      </span>
+                    )}
+                    <ul
+                      className={
+                        locations.length > 1 ? "space-y-2 ps-3" : "space-y-4"
+                      }
+                    >
+                      {country.states.map((state) => (
+                        <li key={state.id}>
+                          <span className="hover:text-munchorange transition-all duration-300">
+                            {state.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </li>
                 ))}
               </ul>

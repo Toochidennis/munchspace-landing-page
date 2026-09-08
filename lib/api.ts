@@ -270,18 +270,35 @@ export type ServiceLocation = {
   code: string;
 };
 
+export type ServiceCountry = {
+  id: string;
+  name: string;
+  code: string;
+  states: ServiceLocation[];
+};
+
 /**
- * The states the platform operates in.
+ * Where the platform operates, grouped by country.
  *
  * Derived server-side from the delivery settings an admin maintains, so this
- * can never advertise somewhere delivery cannot be priced.
+ * can never advertise somewhere delivery cannot be priced — a country is listed
+ * only because at least one of its states is.
  */
-export async function getServiceLocations(): Promise<ServiceLocation[]> {
-  const result = await apiGet<{ data: ServiceLocation[]; total: number }>(
-    "/locations",
-  );
+export async function getServiceLocations(): Promise<ServiceCountry[]> {
+  const result = await apiGet<{
+    data: ServiceCountry[];
+    totalCountries: number;
+    totalStates: number;
+  }>("/locations");
 
-  return result.ok && Array.isArray(result.data?.data) ? result.data.data : [];
+  if (!result.ok || !Array.isArray(result.data?.data)) return [];
+
+  // An API that has not been deployed yet still returns a flat list of states.
+  // Normalise it rather than letting the page fail through the changeover.
+  return result.data.data.map((entry) => ({
+    ...entry,
+    states: Array.isArray(entry.states) ? entry.states : [],
+  }));
 }
 
 // ---------------------------------------------------------------------------
