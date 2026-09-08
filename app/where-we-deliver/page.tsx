@@ -38,23 +38,38 @@ export default async function Page() {
   const { countries, totalCountries, totalStates } =
     await getServiceLocations();
 
+  const named = countries.filter((country) => country.name);
+
   return (
     <div>
-      <section className="min-h-70 md:min-h-90 bg-reddamask pt-43 px-3 md:px-14">
-        <h1 className="font-rubik font-bold text-4xl md:text-6xl uppercase">
-          Where we deliver
-        </h1>
-        {totalStates > 0 && (
-          <p className="mt-3 md:mt-5 text-gray-600">
-            {totalStates} {totalStates === 1 ? "state" : "states"}
-            {totalCountries > 1
-              ? ` across ${totalCountries} countries`
-              : countries[0]
-                ? ` in ${countries[0].name}`
-                : ""}
-            .
+      <section className="relative min-h-70 md:min-h-90 overflow-hidden bg-reddamask pt-43 px-3 md:px-14">
+        {/* The soft shapes the rest of the site uses to break up a flat block. */}
+        <div className="pointer-events-none absolute -right-16 top-20 h-56 w-56 rounded-full bg-white/40" />
+        <div className="pointer-events-none absolute right-40 top-56 hidden h-24 w-24 rounded-full bg-white/30 md:block" />
+
+        <div className="relative">
+          <h1 className="font-rubik text-4xl font-bold md:text-6xl">
+            WHERE WE DELIVER
+          </h1>
+          <p className="mt-3 max-w-xl text-gray-600 md:mt-5">
+            {totalStates > 0 ? (
+              <>
+                We currently deliver to{" "}
+                <span className="font-semibold text-munchprimary">
+                  {totalStates} {totalStates === 1 ? "state" : "states"}
+                </span>
+                {totalCountries > 1
+                  ? ` across ${totalCountries} countries`
+                  : named[0]
+                    ? ` in ${named[0].name}`
+                    : ""}
+                , and we are adding more.
+              </>
+            ) : (
+              "We are lining up our first delivery areas."
+            )}
           </p>
-        )}
+        </div>
       </section>
 
       <div className="overflow-y-hidden">
@@ -74,34 +89,44 @@ export default async function Page() {
         />
       </div>
 
-      <div className="mx-3 md:mx-14 mb-15">
+      <div className="mx-3 mb-20 md:mx-7 lg:mx-14">
         {countries.length === 0 ? (
-          <p className="text-gray-600">
-            We are not delivering anywhere just yet. Please check back shortly,
-            or{" "}
-            <Link href="/contact" className="text-munchorange underline">
-              get in touch
+          <div className="rounded-3xl bg-reddamask px-6 py-12 text-center md:px-12">
+            <h2 className="font-rubik text-2xl font-bold md:text-3xl">
+              Not delivering anywhere just yet
+            </h2>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-gray-600">
+              We are setting up our first delivery areas. Check back shortly, or
+              tell us where you would like us to launch.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-6 inline-block rounded-full bg-munchprimary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-munchprimaryDark"
+            >
+              Get in touch
             </Link>
-            .
-          </p>
+          </div>
         ) : (
-          <div className="space-y-10">
+          <div className="space-y-12">
             {countries.map((country) => (
               <section key={country.id}>
                 {country.name && (
-                  <>
-                    <h2 className="font-rubik font-bold text-xl md:text-2xl mb-1">
+                  <div className="mb-6 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                    <h2 className="font-rubik text-2xl font-bold md:text-3xl">
                       {country.name}
                     </h2>
-                    <p className="text-sm text-gray-500 mb-5">
+                    <span className="text-sm text-gray-500">
                       {country.states.length}{" "}
                       {country.states.length === 1 ? "state" : "states"}
-                    </p>
-                  </>
+                    </span>
+                  </div>
                 )}
-                <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-3 text-sm md:text-base">
+                <ul className="flex flex-wrap gap-3">
                   {country.states.map((state) => (
-                    <li key={state.id} className="text-gray-800">
+                    <li
+                      key={state.id}
+                      className="rounded-full bg-reddamask px-5 py-2.5 text-sm font-medium text-gray-800 md:text-base"
+                    >
                       {state.name}
                     </li>
                   ))}
@@ -111,13 +136,23 @@ export default async function Page() {
           </div>
         )}
 
-        <p className="mt-12 text-sm text-gray-500">
-          Somewhere missing?{" "}
-          <Link href="/contact" className="text-munchorange underline">
-            Tell us where you would like us next
-          </Link>
-          .
-        </p>
+        {countries.length > 0 && (
+          <div className="mt-16 rounded-3xl bg-munchorange px-6 py-10 text-white md:px-12">
+            <h2 className="font-rubik text-2xl font-semibold md:text-3xl">
+              Not in your area yet?
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90 md:text-base">
+              We are expanding steadily. Tell us where you would like us next —
+              it genuinely shapes where we go.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-6 inline-block rounded-full bg-white px-8 py-3 text-sm font-semibold text-munchprimary transition-opacity hover:opacity-90"
+            >
+              Tell us where
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
