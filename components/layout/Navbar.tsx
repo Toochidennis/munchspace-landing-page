@@ -61,7 +61,12 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
     return () => window.removeEventListener("scroll", controlNavbar);
   }, [lastScrollY]);
 
+  // Drives both the desktop bar and the mobile sheet. Where we deliver was
+  // only reachable from the footer, which is a long way down for the question
+  // someone asks first.
   const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Where we deliver", href: "/where-we-deliver" },
     { label: "Join as a Vendor", href: "/join-as-a-vendor" },
     { label: "Join as a Rider", href: "/join-as-a-rider" },
     { label: "About MunchSpace", href: "/about" },
@@ -89,12 +94,14 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center text-sm md:text-xs lg:text-sm space-x-4 lg:space-x-8">
+          {/* Tighter at md than it was: six links share the bar with the logo
+              and the download button, where four used to. */}
+          <nav className="hidden md:flex items-center text-sm md:text-xs lg:text-sm space-x-3 lg:space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="hover:text-munchorange transition-colors"
+                className="hover:text-munchorange transition-colors whitespace-nowrap"
               >
                 {link.label}
               </Link>
