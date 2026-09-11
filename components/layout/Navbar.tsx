@@ -66,10 +66,10 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
   // someone asks first.
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Where we deliver", href: "/where-we-deliver" },
     { label: "Join as a Vendor", href: "/join-as-a-vendor" },
     { label: "Join as a Rider", href: "/join-as-a-rider" },
     { label: "About MunchSpace", href: "/about" },
-    { label: "Where we deliver", href: "/where-we-deliver" },
     { label: "Contact Us", href: "/contact" },
   ];
 
