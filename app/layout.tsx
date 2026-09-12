@@ -67,7 +67,7 @@ export default async function RootLayout({
   const appLinks = await getAppLinks();
 
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en">
       <body
         className={`${rubik.variable} ${inter.variable} antialiased bg-gray-100 overflow-x-hidden w-full max-w-450 mx-auto`}
       >

@@ -24,7 +24,7 @@ const DeliverEverything = () => {
             width={1000}
             height={1000}
             alt="order"
-            className="mx-auto"
+            className="mx-auto w-full h-auto"
             src={
               "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767346390/11_e1pjeh.png"
             }
@@ -45,7 +45,7 @@ const DeliverEverything = () => {
             width={1000}
             height={1000}
             alt="order"
-            className="mx-auto"
+            className="mx-auto w-full h-auto"
             src={
               "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767346274/21_jdqcq0.png"
             }
@@ -66,7 +66,7 @@ const DeliverEverything = () => {
             width={1000}
             height={1000}
             alt="order"
-            className="mx-auto"
+            className="mx-auto w-full h-auto"
             src={"https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767346300/31_h0axaj.png"}
           />
           <h3 className="font-semibold font-rubik text-center text-2xl md:text-xl lg:text-2xl mt-7">
