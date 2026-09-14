@@ -92,58 +92,6 @@ export default async function Footer() {
           Order Now
           <ChevronRight />
         </Button>
-        <Image
-          src={
-            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349266/cr_r80vje.png"
-          }
-          width={300}
-          height={300}
-          alt="chiken republic logo"
-          className="w-20 md:w-14 lg:w-20 absolute lg:left-22 md:left-8 top-40 hidden md:block"
-        />
-        <Image
-          src={
-            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349272/dp_o1cf3o.png"
-          }
-          width={300}
-          height={300}
-          alt="chiken republic logo"
-          className="w-17 md:w-11 lg:w-17 absolute lg:left-53 left-33 top-20 hidden md:block"
-        />
-        <Image
-          src={
-            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349269/ddp_y2llt4.png"
-          }
-          width={300}
-          height={300}
-          alt="chiken republic logo"
-          className="w-12 md:w-9 lg:w-12 absolute lg:left-60 left-40 top-60 hidden md:block"
-        />
-        <Image
-          src={
-            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349281/sr_icnoij.png"
-          }
-          width={300}
-          height={300}
-          alt="chiken republic logo"
-          className="w-15 md:w-9 lg:w-15 absolute right-40 lg:right-60 top-40 lg:top-30 hidden md:block"
-        />
-        <Image
-          src={"/images/footer/kfc.png"}
-          width={300}
-          height={300}
-          alt="chiken republic logo"
-          className="w-20 md:w-14 lg:w-20 absolute right-20 lg:right-30 top-20 hidden md:block"
-        />
-        <Image
-          src={
-            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767349281/kfc_o3qdpe.png"
-          }
-          width={300}
-          height={300}
-          alt="chiken republic logo"
-          className="w-15 md:w-9 lg:w-15 absolute right-22 lg:right-35 top-55 hidden md:block"
-        />
       </div>
       <footer className="bg-black text-white py-12 md:py-10 mx-5 md:mx-7 lg:mx-14 rounded-t-2xl">
         <div className="mx-auto md:px-3 lg:px-12">
