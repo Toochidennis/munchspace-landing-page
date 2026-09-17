@@ -82,6 +82,12 @@ export async function apiGet<T>(
   options: { revalidate?: number | false } = {},
 ): Promise<ApiResult<T>> {
   if (!API_BASE) {
+    // Nothing is fetched, so this leaves no trace anywhere else: no browser
+    // request to inspect, none arriving at the API, and a page that renders as
+    // though the content had simply not been published.
+    console.error(
+      `[api] NEXT_PUBLIC_BASE_URL was not set at build time — ${path} was never requested`,
+    );
     return { ok: false, status: 0, error: "API base URL is not configured." };
   }
 
@@ -106,9 +112,13 @@ export async function apiGet<T>(
     }
 
     return { ok: true, data: body.data };
-  } catch {
+  } catch (error) {
     // Network failure, DNS, timeout — indistinguishable from here and handled
-    // the same way by every caller.
+    // the same way by every caller, but worth naming in the server log.
+    console.error(
+      `[api] ${API_BASE}${path} could not be reached:`,
+      error instanceof Error ? error.message : error,
+    );
     return { ok: false, status: 0, error: "Could not reach the server." };
   }
 }
@@ -125,6 +135,12 @@ export async function apiPost<T>(
   body: unknown,
 ): Promise<ApiResult<T>> {
   if (!API_BASE) {
+    // Nothing is fetched, so this leaves no trace anywhere else: no browser
+    // request to inspect, none arriving at the API, and a page that renders as
+    // though the content had simply not been published.
+    console.error(
+      `[api] NEXT_PUBLIC_BASE_URL was not set at build time — ${path} was never requested`,
+    );
     return { ok: false, status: 0, error: "API base URL is not configured." };
   }
 
