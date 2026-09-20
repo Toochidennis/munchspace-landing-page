@@ -52,9 +52,6 @@ export const metadata: Metadata = {
     description:
       "Hot meals and groceries delivered in minutes with smart AI routing.",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default async function RootLayout({
